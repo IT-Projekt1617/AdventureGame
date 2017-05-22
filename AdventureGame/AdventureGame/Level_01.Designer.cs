@@ -79,7 +79,7 @@
             // barrier2
             // 
             this.barrier2.BackColor = System.Drawing.Color.Aqua;
-            this.barrier2.Location = new System.Drawing.Point(1180, 581);
+            this.barrier2.Location = new System.Drawing.Point(912, 532);
             this.barrier2.Name = "barrier2";
             this.barrier2.Size = new System.Drawing.Size(404, 236);
             this.barrier2.TabIndex = 2;
