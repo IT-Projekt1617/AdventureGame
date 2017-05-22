@@ -1,0 +1,9 @@
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.pdb
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Form1.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Properties.Resources.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.pdb
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_01.resources
