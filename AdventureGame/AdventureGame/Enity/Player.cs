@@ -21,7 +21,7 @@ namespace AdventureGame
         }
         public PictureBox getPlayer()
         {
-            return base.getEntity(); ;
+            return base.getEntity();
         }
 
     }
