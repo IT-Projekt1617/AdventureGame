@@ -231,7 +231,7 @@ namespace AdventureGame
 
                 if (innen)
                 {
-                    p.Top = collidedBox.Bottom + 1;
+                    //p.Top = collidedBox.Bottom + 1;
                 }
 
             }
