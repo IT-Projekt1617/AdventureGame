@@ -29,12 +29,12 @@ namespace AdventureGame
         public static Label Label_6;
         private void Level_01_KeyDown(object sender, KeyEventArgs e)
         {
-            CustomEventHandler.KeyDown(e);
+            CustomEventHandler.KeyDown(e, p);
         }
 
         private void Level_01_KeyUp(object sender, KeyEventArgs e)
         {
-            CustomEventHandler.KeyUp(e);
+            CustomEventHandler.KeyUp(e, p);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventureGame.Handler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,11 @@ namespace AdventureGame.Enity
 {
     class Enemy : LivingEntity
     {
-        private static PictureBox t;
+        private PictureBox t;
 
         public Enemy(PictureBox entity, int speed, int maxhealth, int health, int damage, string texturepath,PictureBox target) : base(entity, speed, maxhealth, health, damage, texturepath)
         {
-
+            LivingEntityHandler.addEnemy(this);
         }
 
         public void setEnemy(PictureBox enemy)
