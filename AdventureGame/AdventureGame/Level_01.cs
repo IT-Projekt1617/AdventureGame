@@ -11,10 +11,11 @@ namespace AdventureGame
 {
     public partial class Level_01 : Form
     {
+        Player p;
         public Level_01()
         {
             InitializeComponent();
-            Player p = new Player(player,10);
+            p = new Player(player,10,20,20,0,"");
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
             
@@ -38,7 +39,7 @@ namespace AdventureGame
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            CustomEventHandler.PaintEvent(panel1,e);
+            CustomEventHandler.PaintEvent(panel1,e,p);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -49,7 +50,8 @@ namespace AdventureGame
             Label_4 = label4;
             Label_5 = label5;
             Label_6 = label6;
-            CustomEventHandler.Update(e);
+            label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
+            CustomEventHandler.Update(e,p);
         }
     }
 }

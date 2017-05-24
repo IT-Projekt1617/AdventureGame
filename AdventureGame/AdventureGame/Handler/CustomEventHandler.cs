@@ -78,13 +78,12 @@ namespace AdventureGame
             }
 
         }
-        public static void Update(EventArgs e)
+        public static void Update(EventArgs e,Player player)
         {
-            int speed = Player.getSpeed();
-            PictureBox p = Player.getPlayer();
+            int speed = player.getSpeed();
+            PictureBox p = player.getPlayer();
 
-
-
+            /*
             if (oben)
             {
                 Level_01.Label_1.Text = "True";
@@ -132,7 +131,7 @@ namespace AdventureGame
             else
             {
                 Level_01.Label_6.Text = "False";
-            }
+            }*/
 
             if (up&&!collideup)
             {
@@ -168,10 +167,10 @@ namespace AdventureGame
             }
         }
 
-        public static void PaintEvent(Panel panel, PaintEventArgs e)
+        public static void PaintEvent(Panel panel, PaintEventArgs e,Player player)
         {
-            PictureBox p = Player.getPlayer();
-            int speed = Player.getSpeed();
+            PictureBox p = player.getPlayer();
+            int speed = player.getSpeed();
 
             //Barrier
             List<Control> Barrierlist = Barrier.getBarrierList();

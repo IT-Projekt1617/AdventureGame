@@ -60,6 +60,7 @@
     <Compile Include="Level_01.Designer.cs">
       <DependentUpon>Level_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="LivingEntity.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
