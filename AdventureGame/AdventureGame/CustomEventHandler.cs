@@ -17,7 +17,7 @@ namespace AdventureGame
         public static bool collideleft = false;
         public static bool collideup = false;
         public static bool collidedown = false;
-
+        private static Control collidedBox = null;
         public static void KeyDown(KeyEventArgs e)
         {
 
@@ -71,23 +71,37 @@ namespace AdventureGame
             int speed = Player.getSpeed();
             PictureBox p = Player.getPlayer();
 
-
-
             if (up&&!collideup)
             {
                 p.Top-= speed;
+            }
+            else
+            {
+                up = false;
             }
             if (down&&!collidedown)
             {
                 p.Top += speed;
             }
+            else
+            {
+                down = false;
+            }
             if (right&&!collideright)
             {
                 p.Left += speed;
             }
+            else
+            {
+                right = false;
+            }
             if (left&&!collideleft)
             {
                 p.Left -= speed;
+            }
+            else
+            {
+                left = false;
             }
         }
 
@@ -95,6 +109,130 @@ namespace AdventureGame
         {
             PictureBox p = Player.getPlayer();
             int speed = Player.getSpeed();
+
+            //Barrier
+            List<Control> Barrierlist = Barrier.getBarrierList();
+            IEnumerable<Control> barrierCollection = Barrierlist.Where(control => control.GetType() == typeof(PictureBox));
+            bool isColliding = barrierCollection.Any(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
+           
+            bool collision = false;
+
+            if (isColliding)
+            {
+                collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
+
+                if (p.Bounds.IntersectsWith(collidedBox.Bounds))
+
+                {
+                    collision = true;
+
+            }
+            else
+            {
+                collision = false;
+            }
+
+                }
+                else
+                {
+                    collidedBox = null;
+                }
+
+            if (collision)
+            {
+                bool oben = false;
+                bool unten = false;
+                bool rechts = false;
+                bool links = false;
+                bool btrl = false;
+                bool btou = false;
+
+                if (p.Bottom < collidedBox.Top + speed)
+                {
+                    oben = true;
+                }
+                if (p.Top > collidedBox.Bottom - speed)
+                {
+                    unten = true;
+                }
+                if (p.Left > collidedBox.Right - speed)
+                {
+                    rechts = true;
+                }
+                if (p.Right < collidedBox.Left + speed)
+                {
+                    links = true;
+                }
+                if (!rechts && !links)
+                {
+                    btrl = true;
+                }
+                if (!oben && !unten)
+                {
+                    btou = true;
+                }
+
+                //Barrier Up
+
+
+                if (unten && btrl)
+                {
+                    collideup = true;
+                    p.Top = collidedBox.Bottom + 1;
+                }
+                else
+                {
+                    collideup = false;
+                }
+
+                //Barrier Down
+
+                if (oben && btrl)
+                {
+                    collidedown = true;
+                    p.Top = collidedBox.Top - p.Height - 1;
+                }
+                else
+                {
+                    collidedown = false;
+                }
+
+                //Barrier Left
+
+                if (rechts && btou)
+                {
+                    collideleft = true;
+                    p.Left = collidedBox.Right + 1;
+                }
+                else
+                {
+                    collideleft = false;
+                }
+
+
+                //Barrier Right
+
+                if (links && btou)
+                {
+                    collideright = true;
+                    p.Left = collidedBox.Left - p.Width-1;
+                }
+                else
+                {
+                    collideright = false;
+                }
+
+               
+            }
+            else
+            {
+                collidedown = false;
+                collideleft = false;
+                collideright = false;
+                collideup = false;
+            }
+
+
 
             //Panel
 
@@ -140,94 +278,6 @@ namespace AdventureGame
             else
             {
                 collidedown = false;
-            }
-
-            //Barrier
-            List<Control> Barrierlist = Barrier.getBarrierList();
-            IEnumerable<Control> barrierCollection = Barrierlist.Where(control => control.GetType() == typeof(PictureBox));
-            bool isColliding = barrierCollection.Any(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-            Control collidedBox = null;
-            bool collision = false;
-
-            if (isColliding)
-            {
-                collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-
-                if (p.Bounds.IntersectsWith(collidedBox.Bounds))
-
-                {
-                    collision = true;
-
-            }
-            else
-            {
-                collision = false;
-            }
-
-                }
-                else
-                {
-                    collidedBox = null;
-                }
-
-            if (collision)
-            {
-
-                //Barrier Left
-
-                if (p.Left > collidedBox.Left && p.Top > collidedBox.Top && p.Bottom < collidedBox.Bottom)
-                {
-                    collideleft = true;
-                    p.Left = collidedBox.Right + 1;
-                }
-                else
-                {
-                    collideleft = false;
-                }
-
-
-                //Barrier Right
-
-                if (p.Right < collidedBox.Right && p.Top > collidedBox.Top && p.Bottom < collidedBox.Bottom)
-                {
-                    collideright = true;
-                    p.Left = collidedBox.Left - p.Width-1;
-                }
-                else
-                {
-                    collideright = false;
-                }
-
-                //Barrier Up
-
-                if (p.Top > collidedBox.Top && p.Left > collidedBox.Left && p.Right < collidedBox.Right)
-                {
-                    collideup = true;
-                    p.Top = collidedBox.Bottom + 1;
-                }
-                else
-                {
-                    collideup = false;
-                }
-
-                //Barrier Down
-
-                if (p.Bottom < collidedBox.Bottom && p.Left > collidedBox.Left && p.Right < collidedBox.Right)
-                {
-                    collidedown = true;
-                    p.Top = collidedBox.Top - p.Height - 1;
-                }
-                else
-                {
-                    collidedown = false;
-                }
-            }
-            else
-            {
-                collidedown = false;
-                collideleft = false;
-                collideright = false;
-                collideup = false;
             }
         }
 

@@ -7,3 +7,13 @@ D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.cspr
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.pdb
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_01.resources
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.config
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.pdb
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\bin\Debug\AdventureGame.pdb
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Form1.resources
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_01.resources
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Properties.Resources.resources
+C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache

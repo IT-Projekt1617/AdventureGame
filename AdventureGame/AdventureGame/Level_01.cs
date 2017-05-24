@@ -11,15 +11,21 @@ namespace AdventureGame
 {
     public partial class Level_01 : Form
     {
-
         public Level_01()
         {
             InitializeComponent();
             Player p = new Player(player,10);
             Barrier.addBarrier(barrier1);
-            Barrier.addBarrier(barrier2);
+            //Barrier.addBarrier(barrier2);
+            
         }
 
+        public static Label Label_1;
+        public static Label Label_2;
+        public static Label Label_3;
+        public static Label Label_4;
+        public static Label Label_5;
+        public static Label Label_6;
         private void Level_01_KeyDown(object sender, KeyEventArgs e)
         {
             CustomEventHandler.KeyDown(e);
@@ -37,6 +43,12 @@ namespace AdventureGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Label_1 = label1;
+            Label_2 = label2;
+            Label_3 = label3;
+            Label_4 = label4;
+            Label_5 = label5;
+            Label_6 = label6;
             CustomEventHandler.Update(e);
         }
     }
