@@ -18,7 +18,7 @@ namespace AdventureGame
         private int hp;
         private int s;
         private string tp;
-        private int d;
+        private int dmg;
 
         //Movement
 
@@ -41,7 +41,7 @@ namespace AdventureGame
             mhp = maxhealth;
             hp = health;
             tp = texturepath;
-            d = damage;
+            dmg = dmgamage;
             LivingEntityHandler.addLivingEntity(this);
             //e.Image = Image.FromFile(texturepath);
 
@@ -94,12 +94,12 @@ namespace AdventureGame
         }
         public void setDamage(int damage)
         {
-            d = damage;
+            dmg = damage;
         }
 
         public int getDamage()
         {
-            return d;
+            return dmg;
         }
 
         public void setRight(bool value)
