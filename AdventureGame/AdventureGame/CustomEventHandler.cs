@@ -146,6 +146,7 @@ namespace AdventureGame
                 bool links = false;
                 bool btrl = false;
                 bool btou = false;
+                bool innen = false;
 
                 if (p.Bottom < collidedBox.Top + speed)
                 {
@@ -170,6 +171,10 @@ namespace AdventureGame
                 if (!oben && !unten)
                 {
                     btou = true;
+                }
+                if (btou && btrl)
+                {
+                    innen = true;
                 }
 
                 //Barrier Up
@@ -222,7 +227,13 @@ namespace AdventureGame
                     collideright = false;
                 }
 
-               
+                //falls reingeglicht
+
+                if (innen)
+                {
+                    p.Top = collidedBox.Bottom + 1;
+                }
+
             }
             else
             {

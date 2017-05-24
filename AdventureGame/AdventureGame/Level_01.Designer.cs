@@ -147,7 +147,7 @@
             // 
             this.barrier2.BackColor = System.Drawing.Color.Transparent;
             this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier2.Location = new System.Drawing.Point(792, 417);
+            this.barrier2.Location = new System.Drawing.Point(792, 443);
             this.barrier2.Name = "barrier2";
             this.barrier2.Size = new System.Drawing.Size(33, 236);
             this.barrier2.TabIndex = 7;
