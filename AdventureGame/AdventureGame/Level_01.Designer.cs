@@ -140,14 +140,14 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // barrier2
             // 
             this.barrier2.BackColor = System.Drawing.Color.Transparent;
             this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier2.Location = new System.Drawing.Point(792, 443);
+            this.barrier2.Location = new System.Drawing.Point(792, 409);
             this.barrier2.Name = "barrier2";
             this.barrier2.Size = new System.Drawing.Size(33, 236);
             this.barrier2.TabIndex = 7;
