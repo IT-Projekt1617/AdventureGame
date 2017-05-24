@@ -41,7 +41,7 @@ namespace AdventureGame
             mhp = maxhealth;
             hp = health;
             tp = texturepath;
-            dmg = dmgamage;
+            dmg = damage;
             LivingEntityHandler.addLivingEntity(this);
             //e.Image = Image.FromFile(texturepath);
 
