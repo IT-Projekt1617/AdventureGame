@@ -10,14 +10,6 @@ namespace AdventureGame.Handler
     class CollisionHandler
     {
 
-
-        private static bool oben = false;
-        private static bool unten = false;
-        private static bool rechts = false;
-        private static bool links = false;
-        private static bool btrl = false;
-        private static bool btou = false;
-        private static bool innen = false;
         private static Control collidedBox = null;
 
         public static void calculateCollisions(Panel panel, LivingEntity le, List<Control> Barrierlist)
@@ -29,163 +21,53 @@ namespace AdventureGame.Handler
             //Barrier
             IEnumerable<Control> barrierCollection = Barrierlist.Where(control => control.GetType() == typeof(PictureBox));
             bool isColliding = barrierCollection.Any(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-
-            bool collision = false;
-
-            if (isColliding)
-            {
-                collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-
-                if (p.Bounds.IntersectsWith(collidedBox.Bounds))
-
+                if (isColliding)
                 {
-                    collision = true;
+                    collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
+
+                    if (p.Bounds.IntersectsWith(collidedBox.Bounds))
+
+                    {
+                    if (le.getDown())
+                    {
+                        le.setDown(false);
+                        le.setCollideDown(true);
+                        p.Top -= (speed);
+                        //p.Top = collidedBox.Top - p.Height - (speed+1);
+                    }
+                    if (le.getUp())
+                    {
+                        le.setUp(false);
+                        le.setCollideUp(true);
+                        p.Top += (speed);
+                        //p.Top = collidedBox.Bottom + (speed + 1);
+                    }
+                    if (le.getLeft())
+                    {
+                        le.setLeft(false);
+                        le.setCollideLeft(true);
+                        p.Left += (speed*2);
+                        //p.Left = collidedBox.Right + (speed + 1);
+                    }
+                    if (le.getRight())
+                    {
+                        le.setRight(false);
+                        le.setCollideRight(true);
+                        p.Left -= (speed);
+                        //p.Left = collidedBox.Left - p.Width - (speed + 1);
+                    }
+
+                }
+                    else
+                    {
+                    
+                    }
 
                 }
                 else
                 {
-                    collision = false;
+                    collidedBox = null;
                 }
-
-            }
-            else
-            {
-                collidedBox = null;
-                oben = false;
-                unten = false;
-                rechts = false;
-                links = false;
-                btrl = false;
-                btou = false;
-                innen = false;
-            }
-
-            if (collision)
-            {
-
-                if (p.Bottom < collidedBox.Top + speed)
-                {
-                    oben = true;
-                }
-                else
-                {
-                    oben = false;
-                }
-                if (p.Top > collidedBox.Bottom - speed)
-                {
-                    unten = true;
-                }
-                else
-                {
-                    unten = false;
-                }
-                if (p.Left > collidedBox.Right - speed)
-                {
-                    rechts = true;
-                }
-                else
-                {
-                    rechts = false;
-                }
-                if (p.Right < collidedBox.Left + speed)
-                {
-                    links = true;
-                }
-                else
-                {
-                    links = false;
-                }
-                if (!rechts && !links)
-                {
-                    btrl = true;
-                }
-                else
-                {
-                    btrl = false;
-                }
-                if (!oben && !unten)
-                {
-                    btou = true;
-                }
-                else
-                {
-                    btou = false;
-                }
-                /* if (btou && btrl)
-                 {
-                     innen = true;
-                 }
-                 else
-                 {
-                     innen = false;
-                 }*/
-
-                //Barrier Up
-
-
-                if (unten && btrl)
-                {
-                    le.setCollideUp(true);
-                    p.Top = collidedBox.Bottom + 1;
-                }
-                else
-                {
-                    le.setCollideUp(false);
-                }
-
-                //Barrier Down
-
-                if (oben && btrl)
-                {
-                    le.setCollideDown(true);
-                    p.Top = collidedBox.Top - p.Height - 1;
-                }
-                else
-                {
-                    le.setCollideDown(false);
-                }
-
-                //Barrier Left
-
-                if (rechts && btou)
-                {
-                    le.setCollideLeft(true);
-                    p.Left = collidedBox.Right + 1;
-                }
-                else
-                {
-                    le.setCollideLeft(false);
-                }
-
-
-                //Barrier Right
-
-                if (links && btou)
-                {
-                    le.setCollideRight(true);
-                    p.Left = collidedBox.Left - p.Width - 1;
-                }
-                else
-                {
-                    le.setCollideRight(false);
-                }
-
-                //falls reingeglicht
-
-                if (innen)
-                {
-                    //p.Top = collidedBox.Bottom + 1;
-                }
-
-            }
-            else
-            {
-                le.setCollideDown(false);
-                le.setCollideLeft(false);
-                le.setCollideRight(false);
-                le.setCollideUp(false);
-            }
-
 
 
             //Panel

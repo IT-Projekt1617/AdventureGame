@@ -34,7 +34,7 @@ namespace AdventureGame
 
         private void Level_01_KeyUp(object sender, KeyEventArgs e)
         {
-            CustomEventHandler.KeyUp(e, p);
+            CustomEventHandler.KeyUp(panel1,e, p);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -51,7 +51,7 @@ namespace AdventureGame
             Label_5 = label5;
             Label_6 = label6;
             label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
-            CustomEventHandler.Update(e,p);
+            CustomEventHandler.Update(panel1,e,p);
         }
     }
 }

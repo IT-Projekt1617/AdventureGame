@@ -35,8 +35,10 @@ namespace AdventureGame
             }
 
         }
-        public static void KeyUp(KeyEventArgs e, Player p)
+        public static void KeyUp(Panel panel, KeyEventArgs e, Player p)
         {
+
+            CollisionHandler.calculateCollisions(panel, p, Barrier.getBarrierList());
 
             if (e.KeyCode == Keys.W)
             {
@@ -59,58 +61,10 @@ namespace AdventureGame
             }
 
         }
-        public static void Update(EventArgs e,Player player)
+        public static void Update(Panel panel,EventArgs e,Player player)
         {
 
-            /*
-            if (oben)
-            {
-                Level_01.Label_1.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_1.Text = "False";
-            }
-            if (unten)
-            {
-                Level_01.Label_2.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_2.Text = "False";
-            }
-            if (rechts)
-            {
-                Level_01.Label_3.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_3.Text = "False";
-            }
-            if (links)
-            {
-                Level_01.Label_4.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_4.Text = "False";
-            }
-            if (btou)
-            {
-                Level_01.Label_5.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_5.Text = "False";
-            }
-            if (btrl)
-            {
-                Level_01.Label_6.Text = "True";
-            }
-            else
-            {
-                Level_01.Label_6.Text = "False";
-            }*/
+            CollisionHandler.calculateCollisions(panel, player, Barrier.getBarrierList());
 
             foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
             {
@@ -124,6 +78,7 @@ namespace AdventureGame
                 else
                 {
                     le.setUp(false);
+                    le.setCollideUp(false);
                 }
                 if (le.getDown() && !le.getCollideDown())
                 {
@@ -132,6 +87,7 @@ namespace AdventureGame
                 else
                 {
                     le.setDown(false);
+                    le.setCollideDown(false);
                 }
                 if (le.getRight() && !le.getCollideRight())
                 {
@@ -140,6 +96,7 @@ namespace AdventureGame
                 else
                 {
                     le.setRight(false);
+                    le.setCollideRight(false);
                 }
                 if (le.getLeft() && !le.getCollideLeft())
                 {
@@ -148,14 +105,16 @@ namespace AdventureGame
                 else
                 {
                     le.setLeft(false);
+                    le.setCollideLeft(false);
                 }
+                
             }
             
         }
 
         public static void PaintEvent(Panel panel, PaintEventArgs e,Player player)
         {
-            CollisionHandler.calculateCollisions(panel,player,Barrier.getBarrierList());
+            //CollisionHandler.calculateCollisions(panel,player,Barrier.getBarrierList());
 
         }
 

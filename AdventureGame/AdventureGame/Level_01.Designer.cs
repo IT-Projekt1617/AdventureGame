@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.barrier2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,12 +41,10 @@
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.barrier2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +65,25 @@
             this.panel1.Size = new System.Drawing.Size(1268, 942);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(91, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "label7";
+            // 
+            // barrier2
+            // 
+            this.barrier2.BackColor = System.Drawing.Color.Transparent;
+            this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.barrier2.Location = new System.Drawing.Point(792, 409);
+            this.barrier2.Name = "barrier2";
+            this.barrier2.Size = new System.Drawing.Size(33, 236);
+            this.barrier2.TabIndex = 7;
+            this.barrier2.TabStop = false;
             // 
             // label6
             // 
@@ -142,27 +161,8 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // barrier2
-            // 
-            this.barrier2.BackColor = System.Drawing.Color.Transparent;
-            this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier2.Location = new System.Drawing.Point(792, 409);
-            this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(33, 236);
-            this.barrier2.TabIndex = 7;
-            this.barrier2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(91, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "label7";
             // 
             // Level_01
             // 
@@ -176,9 +176,9 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             this.ResumeLayout(false);
 
         }
