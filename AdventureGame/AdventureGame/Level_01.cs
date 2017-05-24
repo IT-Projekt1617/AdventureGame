@@ -16,7 +16,7 @@ namespace AdventureGame
             InitializeComponent();
             Player p = new Player(player,10);
             Barrier.addBarrier(barrier1);
-            //Barrier.addBarrier(barrier2);
+            Barrier.addBarrier(barrier2);
             
         }
 

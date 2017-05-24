@@ -17,3 +17,4 @@ C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\Advent
 C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_01.resources
 C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Properties.Resources.resources
 C:\Users\S11_TGI12\Desktop\GitPortable\Data\home\IT_Project\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.config
