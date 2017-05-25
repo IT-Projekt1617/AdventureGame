@@ -16,7 +16,7 @@ namespace AdventureGame
             InitializeComponent();
             this.button1.MouseEnter += new System.EventHandler( this.button1_MouseEnter );
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            axWindowsMediaPlayer1.URL = "../../Resources/background.mp4";
+            axWindowsMediaPlayer1.URL = "D:\\Github\\AdventureGame\\AdventureGame\\AdventureGame\\Resources\\background.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
