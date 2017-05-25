@@ -39,37 +39,39 @@ namespace AdventureGame
             button1.BackColor = SystemColors.ActiveCaption;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-          
 
+            Level_01 l = new Level_01();
+            l.Show();
         }
+        
 
-
-        // button5
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-            
-        }
-
+         //button2
         private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
+        //button3
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //button4
         private void button4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+     
+        // button5
+       
+        private void button5_Click_1(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
@@ -77,16 +79,6 @@ namespace AdventureGame
 
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-            Level_01 l = new Level_01();
-            l.Show();
-        }
     }
 }
