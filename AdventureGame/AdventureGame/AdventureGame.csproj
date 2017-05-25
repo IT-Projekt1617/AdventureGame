@@ -94,5 +94,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11Z8ra4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l83IrNB.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
