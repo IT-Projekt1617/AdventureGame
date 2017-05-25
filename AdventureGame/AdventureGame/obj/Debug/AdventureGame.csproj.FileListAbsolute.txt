@@ -28,3 +28,8 @@ F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Prop
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.pdb
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\Interop.WMPLib.dll
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AxInterop.WMPLib.dll
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\Interop.WMPLib.dll
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AxInterop.WMPLib.dll
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.ResolveComReference.cache
