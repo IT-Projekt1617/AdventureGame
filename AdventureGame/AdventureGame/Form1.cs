@@ -30,7 +30,7 @@ namespace AdventureGame
         // button1 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.Black;
+            button1.BackColor = Color.Aqua;
 
         }
 
@@ -79,6 +79,6 @@ namespace AdventureGame
 
         }
 
-
+        
     }
 }
