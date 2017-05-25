@@ -20,13 +20,6 @@ namespace AdventureGame
             Barrier.addBarrier(barrier2);
             
         }
-
-        public static Label Label_1;
-        public static Label Label_2;
-        public static Label Label_3;
-        public static Label Label_4;
-        public static Label Label_5;
-        public static Label Label_6;
         private void Level_01_KeyDown(object sender, KeyEventArgs e)
         {
             CustomEventHandler.KeyDown(e, p);
@@ -44,14 +37,13 @@ namespace AdventureGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Label_1 = label1;
-            Label_2 = label2;
-            Label_3 = label3;
-            Label_4 = label4;
-            Label_5 = label5;
-            Label_6 = label6;
             label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
             CustomEventHandler.Update(panel1,e,p);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

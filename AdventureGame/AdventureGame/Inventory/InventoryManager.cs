@@ -5,22 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureGame.Handler
+namespace AdventureGame.Inventory
 {
-    class ItemHandler
+    class InventoryManager
     {
-        private static List<Item> Itemlist = new List<Item>();
+        private static List<Item> Inventorylist = new List<Item>();
 
         public static void addItem(Item i)
         {
-            Itemlist.Add(i);
+            Inventorylist.Add(i);
         }
 
         public static bool removeItem(Item i)
         {
-            if (Itemlist.Contains(i))
+            if (Inventorylist.Contains(i))
             {
-                Itemlist.Remove(i);
+                Inventorylist.Remove(i);
                 return true;
             }
             else
@@ -29,14 +29,15 @@ namespace AdventureGame.Handler
             }
         }
 
-        public static void clearItemList()
+        public static void clearInventoryList()
         {
-            Itemlist.Clear();
+            Inventorylist.Clear();
         }
 
         public static List<Item> getItems()
         {
-            return Itemlist;
+            return Inventorylist;
         }
     }
+
 }
