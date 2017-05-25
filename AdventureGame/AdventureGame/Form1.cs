@@ -18,6 +18,14 @@ namespace AdventureGame
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
         }
 
+        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // button1 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackColor = Color.Black;
@@ -26,14 +34,8 @@ namespace AdventureGame
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = SystemColors.Control;
-        } 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            button1.BackColor = SystemColors.ActiveCaption;
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -43,6 +45,8 @@ namespace AdventureGame
 
         }
 
+
+        // button5
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
