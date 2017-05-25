@@ -56,7 +56,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ItemHandler.cs" />
     <Compile Include="Handler\LivingEntityHandler.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="Level_01.cs">
       <SubType>Form</SubType>
     </Compile>
