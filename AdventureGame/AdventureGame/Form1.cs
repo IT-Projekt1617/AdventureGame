@@ -60,12 +60,6 @@ namespace AdventureGame
         }
 
 
-        //button4
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
      
         // button5
        
@@ -78,7 +72,21 @@ namespace AdventureGame
         {
 
         }
+        //buttom4
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Settings s = new Settings();
+            s.Show();
+        }
 
-        
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.Aqua;
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4.BackColor = SystemColors.ActiveCaption;
+        }
     }
 }
