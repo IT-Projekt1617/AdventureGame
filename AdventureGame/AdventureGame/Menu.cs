@@ -9,15 +9,18 @@ using System.Windows.Forms;
 
 namespace AdventureGame
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        Settings s = new Settings();
+        public Menu()
         {
             InitializeComponent();
             this.button1.MouseEnter += new System.EventHandler( this.button1_MouseEnter );
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
           /*  axWindowsMediaPlayer1.URL = "D:\\Github\\AdventureGame\\AdventureGame\\AdventureGame\\Resources\\background.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();*/
+
+           
         }
 
         
@@ -76,7 +79,8 @@ namespace AdventureGame
         private void button4_Click_1(object sender, EventArgs e)
         {
             Settings s = new Settings();
-            s.Show();
+            s.ShowDialog();
+
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
@@ -88,5 +92,7 @@ namespace AdventureGame
         {
             button4.BackColor = SystemColors.ActiveCaption;
         }
+
+        
     }
 }

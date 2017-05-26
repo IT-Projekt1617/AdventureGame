@@ -54,6 +54,7 @@
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setttings";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }
