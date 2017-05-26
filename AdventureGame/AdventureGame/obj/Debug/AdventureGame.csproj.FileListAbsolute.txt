@@ -35,3 +35,4 @@ D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.cspr
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.ResolveComReference.cache
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Settings.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Menu.resources
+F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.CharSelect.resources

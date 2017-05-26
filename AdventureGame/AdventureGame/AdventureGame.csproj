@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Barrier.cs" />
+    <Compile Include="CharSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharSelect.Designer.cs">
+      <DependentUpon>CharSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enity\Enemy.cs" />
     <Compile Include="Handler\CollisionHandler.cs" />
     <Compile Include="Handler\CustomEventHandler.cs" />
@@ -75,6 +81,9 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CharSelect.resx">
+      <DependentUpon>CharSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Inventory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch_cho_img_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch_van_img_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch_van_img_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch_cho_img_03.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

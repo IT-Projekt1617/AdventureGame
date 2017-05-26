@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.player = new System.Windows.Forms.PictureBox();
-            this.barrier1 = new System.Windows.Forms.PictureBox();
-            this.barrier2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.barrier2 = new System.Windows.Forms.PictureBox();
+            this.barrier1 = new System.Windows.Forms.PictureBox();
+            this.player = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -46,35 +47,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // player
-            // 
-            this.player.BackColor = System.Drawing.Color.Black;
-            this.player.Location = new System.Drawing.Point(12, 619);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(60, 50);
-            this.player.TabIndex = 0;
-            this.player.TabStop = false;
-            // 
-            // barrier1
-            // 
-            this.barrier1.BackColor = System.Drawing.Color.Transparent;
-            this.barrier1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier1.Location = new System.Drawing.Point(421, 185);
-            this.barrier1.Name = "barrier1";
-            this.barrier1.Size = new System.Drawing.Size(404, 236);
-            this.barrier1.TabIndex = 1;
-            this.barrier1.TabStop = false;
-            // 
-            // barrier2
-            // 
-            this.barrier2.BackColor = System.Drawing.Color.Transparent;
-            this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier2.Location = new System.Drawing.Point(792, 409);
-            this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(33, 236);
-            this.barrier2.TabIndex = 7;
-            this.barrier2.TabStop = false;
             // 
             // label7
             // 
@@ -87,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.splitter1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.barrier2);
             this.panel1.Controls.Add(this.barrier1);
@@ -98,6 +71,46 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(8, 681);
+            this.splitter1.TabIndex = 9;
+            this.splitter1.TabStop = false;
+            // 
+            // barrier2
+            // 
+            this.barrier2.BackColor = System.Drawing.Color.Transparent;
+            this.barrier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.barrier2.Location = new System.Drawing.Point(792, 409);
+            this.barrier2.Name = "barrier2";
+            this.barrier2.Size = new System.Drawing.Size(33, 236);
+            this.barrier2.TabIndex = 7;
+            this.barrier2.TabStop = false;
+            // 
+            // barrier1
+            // 
+            this.barrier1.BackColor = System.Drawing.Color.Transparent;
+            this.barrier1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.barrier1.Location = new System.Drawing.Point(421, 185);
+            this.barrier1.Name = "barrier1";
+            this.barrier1.Size = new System.Drawing.Size(404, 236);
+            this.barrier1.TabIndex = 1;
+            this.barrier1.TabStop = false;
+            // 
+            // player
+            // 
+            this.player.BackColor = System.Drawing.Color.Black;
+            this.player.BackgroundImage = global::AdventureGame.Properties.Resources.Ch_van_img_03;
+            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.player.Location = new System.Drawing.Point(12, 619);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(60, 50);
+            this.player.TabIndex = 0;
+            this.player.TabStop = false;
+            this.player.Click += new System.EventHandler(this.player_Click);
+            // 
             // Level_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,14 +118,15 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel1);
             this.Name = "Level_01";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +138,6 @@
         private System.Windows.Forms.PictureBox barrier2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }

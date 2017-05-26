@@ -23,7 +23,6 @@ namespace AdventureGame
            
         }
 
-        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -45,8 +44,8 @@ namespace AdventureGame
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            Level_01 l = new Level_01();
-            l.Show();
+            CharSelect cs = new CharSelect();
+            cs.Show();
         }
         
 
@@ -62,15 +61,25 @@ namespace AdventureGame
 
         }
 
-
-     
+   
         // button5
        
         private void button5_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.Aqua;
+        }
 
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            button5.BackColor = SystemColors.ActiveCaption;
+        }
+
+
+        //mediaplayer
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
 
