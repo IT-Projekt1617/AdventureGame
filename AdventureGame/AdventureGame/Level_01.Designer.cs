@@ -115,10 +115,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Level_01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Level 1";
             this.Load += new System.EventHandler(this.Level_01_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);

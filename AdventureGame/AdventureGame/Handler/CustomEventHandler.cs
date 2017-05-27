@@ -34,6 +34,7 @@ namespace AdventureGame
                 p.setRight(true);
             }
 
+
         }
         public static void KeyUp(Panel panel, KeyEventArgs e, Player p)
         {

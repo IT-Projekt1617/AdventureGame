@@ -46,6 +46,7 @@ namespace AdventureGame
 
             CharSelect cs = new CharSelect();
             cs.Show();
+            this.Visible = false;
         }
         
 

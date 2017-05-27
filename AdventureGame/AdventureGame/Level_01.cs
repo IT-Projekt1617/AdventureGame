@@ -20,13 +20,29 @@ namespace AdventureGame
             p = new Player(player, 10, 20, 20, 0, null);
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
-
-            
-            
+               
         }
+
+        
+
         private void Level_01_KeyDown(object sender, KeyEventArgs e)
         {
             CustomEventHandler.KeyDown(e, p);
+
+            DialogResult result; 
+            if (e.KeyCode == Keys.Escape)
+            {
+                 result= MessageBox.Show("Are you sure you wanna quit this 1337 game ?", "Exit", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Menu m =new Menu();
+                    m.Visible = true;
+                    this.Close();
+                }
+            }
+           
+        
+            
         }
 
         private void Level_01_KeyUp(object sender, KeyEventArgs e)

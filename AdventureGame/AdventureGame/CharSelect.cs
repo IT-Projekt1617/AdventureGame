@@ -15,7 +15,9 @@ namespace AdventureGame
         public static int Char = 0;
         public CharSelect()
         {
+            
             InitializeComponent();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
