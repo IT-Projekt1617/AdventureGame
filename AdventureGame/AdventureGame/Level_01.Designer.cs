@@ -102,7 +102,6 @@
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Black;
-            this.player.BackgroundImage = global::AdventureGame.Properties.Resources.Ch_van_img_03;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.player.Location = new System.Drawing.Point(12, 619);
             this.player.Name = "player";
@@ -120,6 +119,7 @@
             this.Name = "Level_01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Level_01_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);

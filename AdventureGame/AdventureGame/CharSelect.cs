@@ -12,7 +12,7 @@ namespace AdventureGame
 {
     public partial class CharSelect : Form
     {
-        int Char = 0;
+        public static int Char = 0;
         public CharSelect()
         {
             InitializeComponent();
@@ -21,18 +21,18 @@ namespace AdventureGame
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Level_01 l = new Level_01();
+            Char = 1;
             l.Show();
             this.Close();
-            Char = 1;
             
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Level_01 l = new Level_01();
+            Char = 2;
             l.Show();
             this.Close();
-            Char =2 ;
         }
         public int getChar()
         {

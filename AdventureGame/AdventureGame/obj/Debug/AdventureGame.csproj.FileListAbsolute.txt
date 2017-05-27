@@ -1,7 +1,6 @@
 D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe
 D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.pdb
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
-D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Form1.resources
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Properties.Resources.resources
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
@@ -36,3 +35,6 @@ F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.cspr
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Settings.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Menu.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.CharSelect.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.CharSelect.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Menu.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Settings.resources

@@ -16,7 +16,8 @@ namespace AdventureGame
         public Level_01()
         {
             InitializeComponent();
-            p = new Player(player,10,20,20,0,"");
+
+            p = new Player(player, 10, 20, 20, 0, null);
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
 
@@ -52,6 +53,20 @@ namespace AdventureGame
         private void player_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Level_01_Load(object sender, EventArgs e)
+        {
+
+            if (CharSelect.Char == 2)
+            {
+                p.setTexturepath(Properties.Resources.Ch_cho_img_03);
+            }
+            else if (CharSelect.Char == 1)
+            {
+                p.setTexturepath(Properties.Resources.Ch_van_img_03);
+
+            }
         }
     }
 }

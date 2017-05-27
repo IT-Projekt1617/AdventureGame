@@ -1,6 +1,7 @@
 ﻿using AdventureGame.Handler;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace AdventureGame.Enity
     {
         private PictureBox t;
 
-        public Enemy(PictureBox entity, int speed, int maxhealth, int health, int damage, string texturepath,PictureBox target) : base(entity, speed, maxhealth, health, damage, texturepath)
+        public Enemy(PictureBox entity, int speed, int maxhealth, int health, int damage, Bitmap texturepath,PictureBox target) : base(entity, speed, maxhealth, health, damage, texturepath)
         {
             LivingEntityHandler.addEnemy(this);
         }

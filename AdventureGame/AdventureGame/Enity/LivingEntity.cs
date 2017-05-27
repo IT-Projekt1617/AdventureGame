@@ -17,7 +17,7 @@ namespace AdventureGame
         private int mhp;
         private int hp;
         private int s;
-        private string tp;
+        private Bitmap tp;
         private int dmg;
 
         //Movement
@@ -34,7 +34,7 @@ namespace AdventureGame
         private bool collideup = false;
         private bool collidedown = false;
 
-        public LivingEntity(PictureBox entity, int speed, int maxhealth, int health, int damage, string texturepath)
+        public LivingEntity(PictureBox entity, int speed, int maxhealth, int health, int damage, Bitmap texturepath)
         {
             e = entity;
             s = speed;
@@ -43,7 +43,7 @@ namespace AdventureGame
             tp = texturepath;
             dmg = damage;
             LivingEntityHandler.addLivingEntity(this);
-            //e.Image = Image.FromFile(texturepath);
+            //e.BackgroundImage = Image.FromFile(texturepath);
 
         }
 
@@ -83,12 +83,13 @@ namespace AdventureGame
         {
             return hp;
         }
-        public void setTexturepath(string texturepath)
+        public void setTexturepath(Bitmap texturepath)
         {
             tp = texturepath;
+            e.BackgroundImage = texturepath;
         }
 
-        public string getTexturepath()
+        public Bitmap getTexturepath()
         {
             return tp;
         }

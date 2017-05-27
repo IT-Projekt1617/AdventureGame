@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -10,7 +11,7 @@ namespace AdventureGame
     {
         
 
-        public Player(PictureBox player, int speed, int maxhealth, int health, int damage, string texturepath) : base (player, speed, maxhealth, health, damage, texturepath)
+        public Player(PictureBox player, int speed, int maxhealth, int health, int damage, Bitmap texturepath) : base (player, speed, maxhealth, health, damage, texturepath)
         {
 
         }
