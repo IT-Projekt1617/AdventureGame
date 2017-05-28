@@ -101,7 +101,7 @@
             // 
             // player
             // 
-            this.player.BackColor = System.Drawing.Color.Black;
+            this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.player.Location = new System.Drawing.Point(12, 619);
             this.player.Name = "player";
