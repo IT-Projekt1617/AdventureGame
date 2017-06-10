@@ -33,10 +33,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Slot1 = new System.Windows.Forms.PictureBox();
+            this.Slot2 = new System.Windows.Forms.PictureBox();
+            this.Slot3 = new System.Windows.Forms.PictureBox();
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -59,6 +66,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Slot1);
+            this.panel1.Controls.Add(this.Slot2);
+            this.panel1.Controls.Add(this.Slot3);
             this.panel1.Controls.Add(this.splitter1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.barrier2);
@@ -78,6 +88,45 @@
             this.splitter1.Size = new System.Drawing.Size(8, 681);
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // Slot1
+            // 
+            this.Slot1.BackColor = System.Drawing.Color.Transparent;
+            this.Slot1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Slot1.Location = new System.Drawing.Point(1138, 12);
+            this.Slot1.Name = "Slot1";
+            this.Slot1.Size = new System.Drawing.Size(30, 30);
+            this.Slot1.TabIndex = 12;
+            this.Slot1.TabStop = false;
+            this.Slot1.Click += new System.EventHandler(this.Slot1_Click);
+            // 
+            // Slot2
+            // 
+            this.Slot2.BackColor = System.Drawing.Color.Transparent;
+            this.Slot2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Slot2.Location = new System.Drawing.Point(1178, 12);
+            this.Slot2.Name = "Slot2";
+            this.Slot2.Size = new System.Drawing.Size(30, 30);
+            this.Slot2.TabIndex = 11;
+            this.Slot2.TabStop = false;
+            this.Slot2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // Slot3
+            // 
+            this.Slot3.BackColor = System.Drawing.Color.Transparent;
+            this.Slot3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Slot3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Slot3.Location = new System.Drawing.Point(1222, 12);
+            this.Slot3.Name = "Slot3";
+            this.Slot3.Size = new System.Drawing.Size(30, 30);
+            this.Slot3.TabIndex = 10;
+            this.Slot3.TabStop = false;
+            this.Slot3.Click += new System.EventHandler(this.Slot3_Click);
             // 
             // barrier2
             // 
@@ -126,6 +175,9 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -141,5 +193,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.PictureBox Slot1;
+        private System.Windows.Forms.PictureBox Slot2;
+        private System.Windows.Forms.PictureBox Slot3;
+        private System.Windows.Forms.Timer timer2;
     }
 }

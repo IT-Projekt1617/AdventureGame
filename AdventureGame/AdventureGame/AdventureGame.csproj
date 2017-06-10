@@ -56,6 +56,7 @@
     <Compile Include="Handler\CollisionHandler.cs" />
     <Compile Include="Handler\CustomEventHandler.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="Inventory\Inventory.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,7 +141,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Inventory\" />
+    <None Include="Resources\item %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ch_cho_img_01.png" />

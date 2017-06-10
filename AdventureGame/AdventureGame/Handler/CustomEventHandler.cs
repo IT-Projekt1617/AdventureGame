@@ -1,4 +1,5 @@
 ﻿using AdventureGame.Handler;
+using AdventureGame.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace AdventureGame
     {
 
 
-        public static void KeyDown(KeyEventArgs e,Player p)
+        public static void KeyDown(KeyEventArgs e,Player p,Control c)
         {
 
             if (e.KeyCode == Keys.W)
@@ -34,6 +35,25 @@ namespace AdventureGame
                 p.setRight(true);
             }
 
+            if (e.KeyCode == Keys.Q)
+            {
+                p.dropItem(c);
+            }
+
+            if (e.KeyCode == Keys.E)
+            {
+                foreach (Item i in ItemHandler.getItems())
+                {
+                    if (p.getEntity().Bounds.IntersectsWith(i.getPbox().Bounds))
+                    {
+                        if (!p.pickupItem(i,c))
+                        {
+                            MessageBox.Show("Dein Inventar ist voll");
+                            break;
+                        }
+                    }
+                }
+            }
 
         }
         public static void KeyUp(Panel panel, KeyEventArgs e, Player p)

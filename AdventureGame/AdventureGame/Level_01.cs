@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventureGame.Items;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using AdventureGame.Inventory;
+
 
 namespace AdventureGame
 {
@@ -27,7 +30,7 @@ namespace AdventureGame
 
         private void Level_01_KeyDown(object sender, KeyEventArgs e)
         {
-            CustomEventHandler.KeyDown(e, p);
+            CustomEventHandler.KeyDown(e, p,this);
 
             DialogResult result; 
             if (e.KeyCode == Keys.Escape)
@@ -74,6 +77,13 @@ namespace AdventureGame
         private void Level_01_Load(object sender, EventArgs e)
         {
 
+            Item testitem = new Item("Test",Properties.Resources.item__1_);
+            testitem.drop(100,30,this);
+            Inventory.Inventory.aSlot = 1;
+            Inventory.Inventory.ps1 = Slot1;
+            Inventory.Inventory.ps2 = Slot2;
+            Inventory.Inventory.ps3 = Slot3;
+
             if (CharSelect.Char == 2)
             {
                 p.setTexturepath(Properties.Resources.Ch_cho_img_03);
@@ -83,6 +93,55 @@ namespace AdventureGame
                 p.setTexturepath(Properties.Resources.Ch_van_img_03);
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            Inventory.Inventory.aSlot = 2;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (Inventory.Inventory.s1 != null)
+            {
+                Inventory.Inventory.ps1.Image = Inventory.Inventory.s1.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps1.Image = null;
+            }
+            if (Inventory.Inventory.s2 != null)
+            {
+                Inventory.Inventory.ps2.Image = Inventory.Inventory.s2.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps2.Image = null;
+            }
+            if (Inventory.Inventory.s3 != null)
+            {
+                Inventory.Inventory.ps3.Image = Inventory.Inventory.s3.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps3.Image = null;
+            }
+
+        }
+
+        private void Slot1_Click(object sender, EventArgs e)
+        {
+            Inventory.Inventory.aSlot = 1;
+        }
+
+        private void Slot3_Click(object sender, EventArgs e)
+        {
+            Inventory.Inventory.aSlot = 3;
+
         }
     }
 }

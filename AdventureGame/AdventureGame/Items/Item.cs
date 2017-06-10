@@ -12,36 +12,24 @@ namespace AdventureGame.Items
     class Item
     {
         private string n;
-        private string tp;
+        private Bitmap tp;
         private PictureBox p;
 
-        public Item(string name,string texturepath, PictureBox pbox)
+        public Item(string name, Bitmap texturepath)
         {
             n = name;
             tp = texturepath;
-            if (pbox == null)
-            {
-                p = new PictureBox();
-            }
-            else
-            {
-                p = pbox;
-            }
-            if (texturepath!=null)
-            {
-                p.Image = Image.FromFile(texturepath);
-            }
             ItemHandler.addItem(this);
 
         }
 
 
-        public void setTexturepath(string texturepath)
+        public void setTexturepath(Bitmap texturepath)
         {
             tp = texturepath;
         }
 
-        public string getTexturepath()
+        public Bitmap getTexturepath()
         {
             return tp;
         }
@@ -55,14 +43,31 @@ namespace AdventureGame.Items
             return n;
         }
 
-        public void spawn(int x, int y)
+        public PictureBox getPbox()
         {
-
+            return p;
         }
 
-        public void despawn()
+        public void drop(int x, int y,Control c)
         {
-            p.Hide();
+            var picture = new PictureBox
+            {
+                Name = getName(),
+                Size = new Size(16, 16),
+                Location = new Point(x, y),
+                Image = tp,
+                BorderStyle = BorderStyle.Fixed3D
+
+            };
+            p = picture;
+            c.Controls.Add(picture);
+            picture.BringToFront();
+        }
+
+        public void despawn(Control c)
+        {
+            c.Controls.Remove(p);
+            p.Dispose();
         }
     }
 }
