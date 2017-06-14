@@ -17,6 +17,7 @@ namespace AdventureGame
         private int mhp;
         private int hp;
         private int s;
+        private int hurtdelay;
         private Bitmap tp;
         private int dmg;
 
@@ -173,6 +174,39 @@ namespace AdventureGame
         public bool getCollideDown()
         {
             return collidedown;
+        }
+
+        public void setHurtDelay(int value)
+        {
+            hurtdelay = value;
+        }
+        public int getHurtdelay()
+        {
+            return hurtdelay;
+        }
+
+        public Boolean damage(int damage,Control c)
+        {
+            if (hurtdelay==0)
+            {
+                if (getHealth() - damage < 1)
+                {
+                    PictureBox pb = getEntity();
+
+                    c.Controls.Remove(pb);
+                    pb.Dispose();
+                    return true;
+                }
+                else
+                {
+                    setHurtDelay(10);
+                    setHealth(getHealth() - damage);
+                    return false;
+                }
+            }
+
+            return false;
+
         }
 
     }

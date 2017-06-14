@@ -27,6 +27,16 @@ namespace AdventureGame
             return base.getEntity();
         }
 
+        public Boolean Damage(int damage, Control c)
+        {
+            
+            if (base.damage(damage, c))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public Boolean pickupItem(Item i,Control c)
         {
             if (Inventory.Inventory.s1 == null)

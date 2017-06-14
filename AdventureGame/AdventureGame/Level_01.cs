@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AdventureGame.Inventory;
-
+using AdventureGame.Handler;
+using AdventureGame.Enity;
 
 namespace AdventureGame
 {
@@ -16,11 +17,13 @@ namespace AdventureGame
     {
         
         Player p;
+        Enemy e;
         public Level_01()
         {
             InitializeComponent();
 
             p = new Player(player, 10, 20, 20, 0, null);
+            e = new Enemy(enemy1,5,10,10,1,null,p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
                
@@ -61,7 +64,7 @@ namespace AdventureGame
         private void timer1_Tick(object sender, EventArgs e)
         {
             label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
-            CustomEventHandler.Update(panel1,e,p);
+            CustomEventHandler.Update(panel1,e,p,this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,6 +96,7 @@ namespace AdventureGame
                 p.setTexturepath(Properties.Resources.Ch_van_img_03);
 
             }
+            this.e.setTarget(p.getEntity());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -103,6 +107,8 @@ namespace AdventureGame
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+
+
             if (Inventory.Inventory.s1 != null)
             {
                 Inventory.Inventory.ps1.Image = Inventory.Inventory.s1.getTexturepath();
@@ -130,6 +136,8 @@ namespace AdventureGame
             {
                 Inventory.Inventory.ps3.Image = null;
             }
+
+            LivingEntityHandler.reduceHurtDelay();
 
         }
 

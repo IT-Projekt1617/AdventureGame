@@ -1,4 +1,5 @@
-﻿using AdventureGame.Handler;
+﻿using AdventureGame.Enity;
+using AdventureGame.Handler;
 using AdventureGame.Items;
 using System;
 using System.Collections.Generic;
@@ -82,16 +83,43 @@ namespace AdventureGame
             }
 
         }
-        public static void Update(Panel panel,EventArgs e,Player player)
+        public static void Update(Panel panel,EventArgs e,Player player,Control c)
         {
 
-            CollisionHandler.calculateCollisions(panel, player, Barrier.getBarrierList());
 
             foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
             {
-                PictureBox p = le.getEntity();
-                int speed = le.getSpeed();
 
+                CollisionHandler.calculateCollisions(panel, le, Barrier.getBarrierList());
+
+
+                PictureBox p = le.getEntity();
+
+                int speed = le.getSpeed();
+                if (le is Enemy)
+                {
+                    Enemy en = le as Enemy;
+                    if (CollisionHandler.calculatePlayerCollisions(panel, le, player))
+                    {
+                        if (player.Damage(en.getDamage(), c))
+                        {
+                            if (c is Form)
+                            {
+
+                                Form f = c as Form;
+                                f.Close();
+                                Menu m = new Menu();
+                                m.Show();
+                                MessageBox.Show("Game over");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        en.followTarget();
+                    }
+
+                }
                 if (le.getUp() && !le.getCollideUp())
                 {
                     p.Top -= speed;
