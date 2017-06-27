@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AdventureGame.Inventory;
+using AdventureGame.Handler;
 
 namespace AdventureGame
 {
     class Player : LivingEntity
     {
-        
 
         public Player(PictureBox player, int speed, int maxhealth, int health, int damage, Bitmap texturepath) : base (player, speed, maxhealth, health, damage, texturepath)
         {
@@ -37,33 +37,94 @@ namespace AdventureGame
             return false;
         }
 
+
+        private void doattackAnimation(Item i, Control c)
+        {
+            AnimationHandler.attackAnimation(i,this,c);
+        }
+
+        public void attack(Control c)
+        {
+            int aSlot = Inventory.Inventory.aSlot;
+                if (Inventory.Inventory.aSlot != 0)
+                {
+                    if (Inventory.Inventory.aSlot == 1)
+                    {
+                        if (Inventory.Inventory.s1 != null)
+                        {
+                            if (Inventory.Inventory.s1 is Sword)
+                            {
+
+                                doattackAnimation(Inventory.Inventory.s1, c);
+
+                            }
+                        }
+                    }
+                    else if (Inventory.Inventory.aSlot == 2)
+                    {
+                        if (Inventory.Inventory.s2 != null)
+                        {
+                            if (Inventory.Inventory.s2 is Sword)
+                            {
+
+                                doattackAnimation(Inventory.Inventory.s2, c);
+                            }
+                        }
+
+                    }
+                    else if (Inventory.Inventory.aSlot == 3)
+                    {
+                        if (Inventory.Inventory.s3 != null)
+                        {
+                            if (Inventory.Inventory.s3 is Sword)
+                            {
+
+                                doattackAnimation(Inventory.Inventory.s3, c);
+                            }
+                        }
+
+                    }
+                }
+        }
+
+
         public Boolean pickupItem(Item i,Control c)
         {
-            if (Inventory.Inventory.s1 == null)
-            {
-                Inventory.Inventory.s1 = i;
-                c.Controls.Remove(i.getPbox());
-                i.getPbox().Dispose();
-                return true;
-            }
-            if (Inventory.Inventory.s2 == null)
+
+            if (c.Controls.Contains(i.getPbox()))
             {
 
-                Inventory.Inventory.s2 = i;
-                c.Controls.Remove(i.getPbox());
-                i.getPbox().Dispose();
-                return true;
-            }
-            if (Inventory.Inventory.s3 == null)
-            {
+                if (Inventory.Inventory.s1 == null)
+                {
 
-                Inventory.Inventory.s3 = i;
-                c.Controls.Remove(i.getPbox());
-                i.getPbox().Dispose();
-                return true;
+                    c.Controls.Remove(i.getPbox());
+                    i.getPbox().Dispose();
+                    Inventory.Inventory.s1 = i;
+                    return true;
+                }
+                if (Inventory.Inventory.s2 == null)
+                {
+
+                    c.Controls.Remove(i.getPbox());
+                    i.getPbox().Dispose();
+
+                    Inventory.Inventory.s2 = i;
+                    return true;
+                }
+                if (Inventory.Inventory.s3 == null)
+                {
+
+                    c.Controls.Remove(i.getPbox());
+                    i.getPbox().Dispose();
+                    Inventory.Inventory.s3 = i;
+                    return true;
+                }
+
+                return false;
             }
 
-            return false;
+            return true;
+
         }
 
         public void dropItem(Control c)

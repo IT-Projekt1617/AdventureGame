@@ -19,26 +19,36 @@ namespace AdventureGame
             if (e.KeyCode == Keys.W)
             {
                 p.setUp(true);
+                AnimationHandler.setLocationType(Location.TOP);
             }
 
             if (e.KeyCode == Keys.S)
             {
                 p.setDown(true);
+                AnimationHandler.setLocationType(Location.BOT);
             }
 
             if (e.KeyCode == Keys.A)
             {
                 p.setLeft(true);
+                AnimationHandler.setLocationType(Location.LEFT);
             }
 
             if (e.KeyCode == Keys.D)
             {
                 p.setRight(true);
+                AnimationHandler.setLocationType(Location.RIGHT);
+
             }
 
             if (e.KeyCode == Keys.Q)
             {
                 p.dropItem(c);
+            }
+
+            if (e.KeyCode == Keys.Space)
+            {
+                p.attack(c);
             }
 
             if (e.KeyCode == Keys.E)
@@ -52,12 +62,16 @@ namespace AdventureGame
                             MessageBox.Show("Dein Inventar ist voll");
                             break;
                         }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
             }
 
         }
-        public static void KeyUp(Panel panel, KeyEventArgs e, Player p)
+        public static void KeyUp(Panel panel, KeyEventArgs e, Player p,Control c)
         {
 
             CollisionHandler.calculateCollisions(panel, p, Barrier.getBarrierList());
@@ -81,12 +95,17 @@ namespace AdventureGame
             {
                 p.setRight(false);
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                AnimationHandler.deleteAnimation(c);
+            }
 
         }
         public static void Update(Panel panel,EventArgs e,Player player,Control c)
         {
 
-
+            AnimationHandler.setLocation(player,Inventory.Inventory.getaItem());
+            CollisionHandler.calculatePlayerHit(player,c);
             foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
             {
 
@@ -101,7 +120,11 @@ namespace AdventureGame
                     Enemy en = le as Enemy;
                     if (CollisionHandler.calculatePlayerCollisions(panel, le, player))
                     {
-                        if (player.Damage(en.getDamage(), c))
+
+                        if (en.getEntity().Visible)
+                        {
+
+                            if (player.Damage(en.getDamage(), c))
                         {
                             if (c is Form)
                             {
@@ -113,6 +136,7 @@ namespace AdventureGame
                                 MessageBox.Show("Game over");
                             }
                         }
+                    }
                     }
                     else
                     {

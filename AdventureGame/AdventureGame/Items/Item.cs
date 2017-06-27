@@ -14,14 +14,17 @@ namespace AdventureGame.Items
         private string n;
         private Bitmap tp;
         private PictureBox p;
+        private String path;
 
-        public Item(string name, Bitmap texturepath)
+        public Item(string name, Bitmap texturepath, String imagepath)
         {
             n = name;
             tp = texturepath;
+            path = imagepath;
             ItemHandler.addItem(this);
 
         }
+
 
 
         public void setTexturepath(Bitmap texturepath)
@@ -33,6 +36,13 @@ namespace AdventureGame.Items
         {
             return tp;
         }
+
+
+        public String getPath()
+        {
+            return path;
+        }
+
         public void setName(string name)
         {
             n = name;
@@ -53,7 +63,7 @@ namespace AdventureGame.Items
             var picture = new PictureBox
             {
                 Name = getName(),
-                Size = new Size(16, 16),
+                Size = new Size(32, 32),
                 Location = new Point(x, y),
                 Image = tp,
                 BorderStyle = BorderStyle.Fixed3D

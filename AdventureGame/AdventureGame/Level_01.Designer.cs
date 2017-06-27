@@ -32,6 +32,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.enemy1 = new System.Windows.Forms.PictureBox();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
@@ -40,15 +41,14 @@
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.enemy1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -83,6 +83,16 @@
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // enemy1
+            // 
+            this.enemy1.BackColor = System.Drawing.Color.DarkRed;
+            this.enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.enemy1.Location = new System.Drawing.Point(1080, 185);
+            this.enemy1.Name = "enemy1";
+            this.enemy1.Size = new System.Drawing.Size(60, 50);
+            this.enemy1.TabIndex = 13;
+            this.enemy1.TabStop = false;
             // 
             // Slot1
             // 
@@ -162,16 +172,6 @@
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // enemy1
-            // 
-            this.enemy1.BackColor = System.Drawing.Color.DarkRed;
-            this.enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.enemy1.Location = new System.Drawing.Point(1080, 185);
-            this.enemy1.Name = "enemy1";
-            this.enemy1.Size = new System.Drawing.Size(60, 50);
-            this.enemy1.TabIndex = 13;
-            this.enemy1.TabStop = false;
-            // 
             // Level_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,13 +188,13 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             this.ResumeLayout(false);
 
         }

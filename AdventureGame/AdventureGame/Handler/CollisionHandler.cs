@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AdventureGame.Enity;
+using AdventureGame.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,13 +23,13 @@ namespace AdventureGame.Handler
             //Barrier
             IEnumerable<Control> barrierCollection = Barrierlist.Where(control => control.GetType() == typeof(PictureBox));
             bool isColliding = barrierCollection.Any(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-                if (isColliding)
+            if (isColliding)
+            {
+                collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
+
+                if (p.Bounds.IntersectsWith(collidedBox.Bounds))
+
                 {
-                    collidedBox = barrierCollection.FirstOrDefault(PictureBox => p.Bounds.IntersectsWith(PictureBox.Bounds));
-
-                    if (p.Bounds.IntersectsWith(collidedBox.Bounds))
-
-                    {
                     if (le.getDown())
                     {
                         le.setDown(false);
@@ -46,7 +48,7 @@ namespace AdventureGame.Handler
                     {
                         le.setLeft(false);
                         le.setCollideLeft(true);
-                        p.Left += (speed*2);
+                        p.Left += (speed * 2);
                         //p.Left = collidedBox.Right + (speed + 1);
                     }
                     if (le.getRight())
@@ -58,16 +60,16 @@ namespace AdventureGame.Handler
                     }
 
                 }
-                    else
-                    {
-                    
-                    }
-
-                }
                 else
                 {
-                    collidedBox = null;
+
                 }
+
+            }
+            else
+            {
+                collidedBox = null;
+            }
 
 
             //Panel
@@ -113,7 +115,7 @@ namespace AdventureGame.Handler
             }
             else
             {
-                 le.setCollideDown(false);
+                le.setCollideDown(false);
             }
         }
 
@@ -122,7 +124,7 @@ namespace AdventureGame.Handler
             PictureBox p = le.getEntity();
             int speed = le.getSpeed();
 
-         
+
             bool isColliding = p.Bounds.IntersectsWith(pl.getEntity().Bounds);
             if (isColliding)
             {
@@ -227,6 +229,25 @@ namespace AdventureGame.Handler
         }
 
 
+        public static void calculatePlayerHit(Player p, Control c)
+        {
+
+            if (AnimationHandler.activeanimation != null)
+            {
+                PictureBox pbox = AnimationHandler.activeanimation;
+                foreach (Enemy en in LivingEntityHandler.getEnemys())
+                {
+
+                    if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                    {
+                        Item i = Inventory.Inventory.getaItem();
+                        Sword s = i as Sword;
+                        en.damage(p.getDamage() + s.getDamage(), c);
+
+                    }
+                }
+            }
+        }
     }
 }
 

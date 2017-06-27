@@ -192,7 +192,7 @@ namespace AdventureGame
                 if (getHealth() - damage < 1)
                 {
                     PictureBox pb = getEntity();
-
+                    pb.Visible = false;
                     c.Controls.Remove(pb);
                     pb.Dispose();
                     return true;

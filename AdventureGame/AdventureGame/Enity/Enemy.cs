@@ -30,59 +30,62 @@ namespace AdventureGame.Enity
 
         public void followTarget()
         {
-            if (t!=null) {
-            if (t.Bottom < getEntity().Top)
+            if(getEntity().Visible){
+            if (t != null)
             {
-                if (!getCollideUp())
+                if (t.Bottom < getEntity().Top)
                 {
-                    setDown(false);
-                    setUp(true);
+                    if (!getCollideUp())
+                    {
+                        setDown(false);
+                        setUp(true);
+                    }
+                    else
+                    {
+                        setUp(false);
+                    }
                 }
-                else
-                {
-                    setUp(false);
-                }
-            }
 
-            if (t.Top > getEntity().Bottom)
-            {
-                if (!getCollideDown())
+                if (t.Top > getEntity().Bottom)
                 {
-                    setUp(false);
-                    setDown(true);
+                    if (!getCollideDown())
+                    {
+                        setUp(false);
+                        setDown(true);
+                    }
+                    else
+                    {
+                        setDown(false);
+                    }
                 }
-                else
-                {
-                    setDown(false);
-                }
-            }
 
-            if (t.Right < getEntity().Left)
-            {
-                if (!getCollideLeft())
+                if (t.Right < getEntity().Left)
                 {
-                    setRight(false);
-                    setLeft(true);
+                    if (!getCollideLeft())
+                    {
+                        setRight(false);
+                        setLeft(true);
+                    }
+                    else
+                    {
+                        setLeft(false);
+                    }
                 }
-                else
-                {
-                    setLeft(false);
-                }
-            }
 
-            if (t.Left > getEntity().Right)
-            {
-                if (!getCollideRight())
+                if (t.Left > getEntity().Right)
                 {
+                    if (!getCollideRight())
+                    {
                         setLeft(false);
                         setRight(true);
+                    }
+                    else
+                    {
+                        setRight(false);
+                    }
                 }
-                else
-                {
-                    setRight(false);
-                }
-            }
 
+            }
         }
         }
 

@@ -53,7 +53,7 @@ namespace AdventureGame
 
         private void Level_01_KeyUp(object sender, KeyEventArgs e)
         {
-            CustomEventHandler.KeyUp(panel1,e, p);
+            CustomEventHandler.KeyUp(panel1,e, p,this);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -80,8 +80,9 @@ namespace AdventureGame
         private void Level_01_Load(object sender, EventArgs e)
         {
 
-            Item testitem = new Item("Test",Properties.Resources.item__1_);
-            testitem.drop(100,30,this);
+            Sword testsword = new Sword("Testsword",Properties.Resources.sword, "..\\..\\Resources\\sword.png", 2);
+            testsword.drop(250, 250,this);
+            
             Inventory.Inventory.aSlot = 1;
             Inventory.Inventory.ps1 = Slot1;
             Inventory.Inventory.ps2 = Slot2;
@@ -138,7 +139,7 @@ namespace AdventureGame
             }
 
             LivingEntityHandler.reduceHurtDelay();
-
+            AnimationHandler.reduceanimationCD(this);
         }
 
         private void Slot1_Click(object sender, EventArgs e)

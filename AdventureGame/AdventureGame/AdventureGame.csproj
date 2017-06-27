@@ -53,10 +53,12 @@
       <DependentUpon>CharSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Enity\Enemy.cs" />
+    <Compile Include="Handler\AnimationHandler.cs" />
     <Compile Include="Handler\CollisionHandler.cs" />
     <Compile Include="Handler\CustomEventHandler.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="Inventory\Inventory.cs" />
+    <Compile Include="Items\Sword.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ch_cho_img_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sword.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
