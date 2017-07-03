@@ -186,6 +186,23 @@ namespace AdventureGame
                 }
                 
             }
+
+            try
+            {
+
+                foreach (Bomb b in ItemHandler.getBombs())
+                {
+                    b.UpdateCD(c);
+                }
+            }
+            catch
+            {
+
+                foreach (Bomb b in ItemHandler.getBombs())
+                {
+                    b.UpdateCD(c);
+                }
+            }
             
         }
 

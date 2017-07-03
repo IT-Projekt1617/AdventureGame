@@ -116,6 +116,27 @@ namespace AdventureGame.Handler
             }
         }
 
+        public static void bombAnimation(Bomb b, Control c)
+        {
+            if (activeanimation == null)
+            {
+                var picture = new PictureBox
+                {
+                    Name = b.getName(),
+                    Size = new Size(32, 32),
+                    Image = Image.FromFile(b.getPath()),
+                    BorderStyle = BorderStyle.None,
+                    Location = new Point(b.getPbox().Location.X, b.getPbox().Location.Y)
+
+                };
+                activeanimation = picture;
+                c.Controls.Add(picture);
+                picture.BringToFront();
+                animationCD = 3;
+
+            }
+        }
+
         public static void deleteAnimation(Control c)
         {
             if (activeanimation!=null)

@@ -56,7 +56,11 @@ namespace AdventureGame
                   {
                     HealthPotion hp = aItem as HealthPotion;
                     hp.use(this);
-                  }
+                  }else if (aItem is Bomb)
+                {
+                    Bomb b = aItem as Bomb;
+                    b.use(this, c);
+                }
                 }  
         }
 

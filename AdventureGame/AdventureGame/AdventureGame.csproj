@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\HealthPotion.cs" />
     <Compile Include="Level_02.cs">
       <SubType>Form</SubType>

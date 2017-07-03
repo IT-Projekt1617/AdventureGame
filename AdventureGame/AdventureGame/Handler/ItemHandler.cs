@@ -10,6 +10,7 @@ namespace AdventureGame.Handler
     class ItemHandler
     {
         private static List<Item> Itemlist = new List<Item>();
+        private static List<Bomb> Bomblist = new List<Bomb>();
 
         public static void addItem(Item i)
         {
@@ -37,6 +38,35 @@ namespace AdventureGame.Handler
         public static List<Item> getItems()
         {
             return Itemlist;
+        }
+
+
+        public static void addBomb(Bomb i)
+        {
+            Bomblist.Add(i);
+        }
+
+        public static bool removeBomb(Bomb i)
+        {
+            if (Bomblist.Contains(i))
+            {
+                Bomblist.Remove(i);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void clearBombList()
+        {
+            Bomblist.Clear();
+        }
+
+        public static List<Bomb> getBombs()
+        {
+            return Bomblist;
         }
     }
 }

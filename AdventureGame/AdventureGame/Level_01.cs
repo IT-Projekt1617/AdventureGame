@@ -25,7 +25,7 @@ namespace AdventureGame
             InitializeComponent();
 
             p = new Player(player, 10, 20, 20, 0, null);
-            e = new Enemy(enemy1,5,10,10,1,new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null),null,p.getEntity());
+            e = new Enemy(enemy1,5,10,10,20,new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null),null,p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
             d = new Door(this,new Level_02(),true,Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
@@ -85,6 +85,9 @@ namespace AdventureGame
 
             Sword testsword = new Sword("Testsword",Properties.Resources.sword, "..\\..\\Resources\\sword.png", 2);
             testsword.drop(250, 250,this);
+
+            Bomb bomb = new Bomb("Bomb", 20, 150, 100, Properties.Resources.Ch_van_img_02, null);
+            bomb.drop(500,500,this);
             
             Inventory.Inventory.aSlot = 1;
             Inventory.Inventory.ps1 = Slot1;
