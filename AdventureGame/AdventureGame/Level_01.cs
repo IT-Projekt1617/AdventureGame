@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AdventureGame.Inventory;
 using AdventureGame.Handler;
 using AdventureGame.Enity;
+using AdventureGame.Terrain;
 
 namespace AdventureGame
 {
@@ -18,6 +19,7 @@ namespace AdventureGame
         
         Player p;
         Enemy e;
+        Door d;
         public Level_01()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace AdventureGame
             e = new Enemy(enemy1,5,10,10,1,null,p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
+            d = new Door(this,new Level_02(),true,Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
                
         }
 
@@ -64,7 +67,7 @@ namespace AdventureGame
         private void timer1_Tick(object sender, EventArgs e)
         {
             label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
-            CustomEventHandler.Update(panel1,e,p,this);
+            CustomEventHandler.Update(panel1,e,p,d,this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -150,6 +153,11 @@ namespace AdventureGame
         private void Slot3_Click(object sender, EventArgs e)
         {
             Inventory.Inventory.aSlot = 3;
+
+        }
+
+        private void enemy1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -1,6 +1,7 @@
 ﻿using AdventureGame.Enity;
 using AdventureGame.Handler;
 using AdventureGame.Items;
+using AdventureGame.Terrain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,11 +102,12 @@ namespace AdventureGame
             }
 
         }
-        public static void Update(Panel panel,EventArgs e,Player player,Control c)
+        public static void Update(Panel panel,EventArgs e,Player player,Door d,Control c)
         {
 
             AnimationHandler.setLocation(player,Inventory.Inventory.getaItem());
             CollisionHandler.calculatePlayerHit(player,c);
+            d.testforNextLevel(player);
             foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
             {
 

@@ -113,6 +113,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closeddoor {
+            get {
+                object obj = ResourceManager.GetObject("closeddoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap item__1_ {
             get {
                 object obj = ResourceManager.GetObject("item (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap l83IrNB {
             get {
                 object obj = ResourceManager.GetObject("l83IrNB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opendoor {
+            get {
+                object obj = ResourceManager.GetObject("opendoor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,6 +28,14 @@ namespace AdventureGame.Enity
             return t;
         }
 
+        public void Damage(int damage, Control c)
+        {
+            if (base.damage(damage,c))
+            {
+                LivingEntityHandler.removeEnemy(this);
+            }
+        }
+
         public void followTarget()
         {
             if(getEntity().Visible){

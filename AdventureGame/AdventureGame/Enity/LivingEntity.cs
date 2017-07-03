@@ -44,7 +44,7 @@ namespace AdventureGame
             tp = texturepath;
             dmg = damage;
             LivingEntityHandler.addLivingEntity(this);
-            //e.BackgroundImage = Image.FromFile(texturepath);
+            //e.BackgroundImage = texturepath;
 
         }
 
@@ -185,7 +185,7 @@ namespace AdventureGame
             return hurtdelay;
         }
 
-        public Boolean damage(int damage,Control c)
+        protected Boolean damage(int damage,Control c)
         {
             if (hurtdelay==0)
             {
@@ -193,6 +193,7 @@ namespace AdventureGame
                 {
                     PictureBox pb = getEntity();
                     pb.Visible = false;
+                    LivingEntityHandler.removeLivingEntity(this);
                     c.Controls.Remove(pb);
                     pb.Dispose();
                     return true;

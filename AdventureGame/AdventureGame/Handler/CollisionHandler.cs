@@ -235,18 +235,35 @@ namespace AdventureGame.Handler
             if (AnimationHandler.activeanimation != null)
             {
                 PictureBox pbox = AnimationHandler.activeanimation;
-                foreach (Enemy en in LivingEntityHandler.getEnemys())
+
+                try
                 {
-
-                    if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                    foreach (Enemy en in LivingEntityHandler.getEnemys())
                     {
-                        Item i = Inventory.Inventory.getaItem();
-                        Sword s = i as Sword;
-                        en.damage(p.getDamage() + s.getDamage(), c);
+                        if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                        {
+                            Item i = Inventory.Inventory.getaItem();
+                            Sword s = i as Sword;
+                            en.Damage(p.getDamage() + s.getDamage(), c);
 
+                        }
+                    }
+
+
+                } catch {
+                    foreach (Enemy en in LivingEntityHandler.getEnemys())
+                    {
+                        if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                        {
+                            Item i = Inventory.Inventory.getaItem();
+                            Sword s = i as Sword;
+                            en.Damage(p.getDamage() + s.getDamage(), c);
+
+                        }
                     }
                 }
             }
+            
         }
     }
 }
