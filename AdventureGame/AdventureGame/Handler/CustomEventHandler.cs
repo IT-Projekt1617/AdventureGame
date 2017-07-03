@@ -56,9 +56,10 @@ namespace AdventureGame
             {
                 foreach (Item i in ItemHandler.getItems())
                 {
+                    if (i.getPbox()!=null) { 
                     if (p.getEntity().Bounds.IntersectsWith(i.getPbox().Bounds))
                     {
-                        if (!p.pickupItem(i,c))
+                        if (!p.pickupItem(i, c))
                         {
                             MessageBox.Show("Dein Inventar ist voll");
                             break;
@@ -68,6 +69,7 @@ namespace AdventureGame
                             break;
                         }
                     }
+                  }
                 }
             }
 

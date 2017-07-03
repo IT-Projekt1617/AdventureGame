@@ -45,46 +45,19 @@ namespace AdventureGame
 
         public void attack(Control c)
         {
-            int aSlot = Inventory.Inventory.aSlot;
-                if (Inventory.Inventory.aSlot != 0)
+            Item aItem = Inventory.Inventory.getaItem();
+                if (aItem != null)
                 {
-                    if (Inventory.Inventory.aSlot == 1)
-                    {
-                        if (Inventory.Inventory.s1 != null)
-                        {
-                            if (Inventory.Inventory.s1 is Sword)
-                            {
+                  if (aItem is Sword)
+                  {
+                    doattackAnimation(aItem, c);
 
-                                doattackAnimation(Inventory.Inventory.s1, c);
-
-                            }
-                        }
-                    }
-                    else if (Inventory.Inventory.aSlot == 2)
-                    {
-                        if (Inventory.Inventory.s2 != null)
-                        {
-                            if (Inventory.Inventory.s2 is Sword)
-                            {
-
-                                doattackAnimation(Inventory.Inventory.s2, c);
-                            }
-                        }
-
-                    }
-                    else if (Inventory.Inventory.aSlot == 3)
-                    {
-                        if (Inventory.Inventory.s3 != null)
-                        {
-                            if (Inventory.Inventory.s3 is Sword)
-                            {
-
-                                doattackAnimation(Inventory.Inventory.s3, c);
-                            }
-                        }
-
-                    }
-                }
+                  }else if (aItem is HealthPotion)
+                  {
+                    HealthPotion hp = aItem as HealthPotion;
+                    hp.use(this);
+                  }
+                }  
         }
 
 

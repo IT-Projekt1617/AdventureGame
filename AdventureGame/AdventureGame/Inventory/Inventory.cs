@@ -48,5 +48,21 @@ namespace AdventureGame.Inventory
             }
             return null;
         }
+
+        public static void removeaItem()
+        {
+            if (aSlot == 1)
+            {
+                s1 = null;
+            }
+            if (aSlot == 2)
+            {
+                s2 = null;
+            }
+            if (aSlot == 3)
+            {
+                s3 = null;
+            }
+        }
     }
 }

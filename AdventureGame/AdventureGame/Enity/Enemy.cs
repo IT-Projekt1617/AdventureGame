@@ -1,4 +1,5 @@
 ﻿using AdventureGame.Handler;
+using AdventureGame.Items;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,9 +13,12 @@ namespace AdventureGame.Enity
     class Enemy : LivingEntity
     {
         private PictureBox t;
+        private Item loot;
 
-        public Enemy(PictureBox entity, int speed, int maxhealth, int health, int damage, Bitmap texturepath,PictureBox target) : base(entity, speed, maxhealth, health, damage, texturepath)
+        public Enemy(PictureBox entity, int speed, int maxhealth, int health, int damage,Item Loot, Bitmap texturepath,PictureBox target) : base(entity, speed, maxhealth, health, damage, texturepath)
         {
+            loot = Loot;
+            t = target;
             LivingEntityHandler.addEnemy(this);
         }
 
@@ -32,6 +36,7 @@ namespace AdventureGame.Enity
         {
             if (base.damage(damage,c))
             {
+                loot.drop(getEntity().Location.X, getEntity().Location.Y, c);
                 LivingEntityHandler.removeEnemy(this);
             }
         }

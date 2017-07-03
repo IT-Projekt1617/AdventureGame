@@ -25,7 +25,7 @@ namespace AdventureGame
             InitializeComponent();
 
             p = new Player(player, 10, 20, 20, 0, null);
-            e = new Enemy(enemy1,5,10,10,1,null,p.getEntity());
+            e = new Enemy(enemy1,5,10,10,1,new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null),null,p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
             d = new Door(this,new Level_02(),true,Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
