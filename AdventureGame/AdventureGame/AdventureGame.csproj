@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enity\Ghost.cs" />
+    <Compile Include="Enity\Zombie.cs" />
     <Compile Include="Items\Bomb.cs" />
     <Compile Include="Items\HealthPotion.cs" />
     <Compile Include="Level_02.cs">

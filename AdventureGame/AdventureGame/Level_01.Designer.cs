@@ -32,16 +32,17 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.door = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.ghost1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -70,6 +72,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ghost1);
             this.panel1.Controls.Add(this.door);
             this.panel1.Controls.Add(this.enemy1);
             this.panel1.Controls.Add(this.Slot1);
@@ -86,19 +89,6 @@
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(8, 681);
-            this.splitter1.TabIndex = 9;
-            this.splitter1.TabStop = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // door
             // 
@@ -155,6 +145,14 @@
             this.Slot3.TabStop = false;
             this.Slot3.Click += new System.EventHandler(this.Slot3_Click);
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(8, 681);
+            this.splitter1.TabIndex = 9;
+            this.splitter1.TabStop = false;
+            // 
             // barrier2
             // 
             this.barrier2.BackColor = System.Drawing.Color.Transparent;
@@ -186,6 +184,21 @@
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // ghost1
+            // 
+            this.ghost1.BackColor = System.Drawing.Color.Aquamarine;
+            this.ghost1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ghost1.Location = new System.Drawing.Point(916, 619);
+            this.ghost1.Name = "ghost1";
+            this.ghost1.Size = new System.Drawing.Size(60, 50);
+            this.ghost1.TabIndex = 15;
+            this.ghost1.TabStop = false;
+            // 
             // Level_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +242,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox door;
+        private System.Windows.Forms.PictureBox ghost1;
     }
 }

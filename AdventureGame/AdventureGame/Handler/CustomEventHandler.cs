@@ -110,82 +110,89 @@ namespace AdventureGame
             AnimationHandler.setLocation(player,Inventory.Inventory.getaItem());
             CollisionHandler.calculatePlayerHit(player,c);
             d.testforNextLevel(player);
-            foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
+            try
             {
-
-                CollisionHandler.calculateCollisions(panel, le, Barrier.getBarrierList());
-
-
-                PictureBox p = le.getEntity();
-
-                int speed = le.getSpeed();
-                if (le is Enemy)
+                foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
                 {
-                    Enemy en = le as Enemy;
-                    if (CollisionHandler.calculatePlayerCollisions(panel, le, player))
+
+                    if (!(le is Ghost))
                     {
+                        CollisionHandler.calculateCollisions(panel, le, Barrier.getBarrierList());
+                    }
 
-                        if (en.getEntity().Visible)
+                    PictureBox p = le.getEntity();
+
+                    int speed = le.getSpeed();
+                    if (le is Enemy)
+                    {
+                        Enemy en = le as Enemy;
+                        if (CollisionHandler.calculatePlayerCollisions(panel, le, player))
                         {
 
-                            if (player.Damage(en.getDamage(), c))
-                        {
-                            if (c is Form)
+                            if (en.getEntity().Visible)
                             {
 
-                                Form f = c as Form;
-                                f.Close();
-                                Menu m = new Menu();
-                                m.Show();
-                                MessageBox.Show("Game over");
+                                if (player.Damage(en.getDamage(), c))
+                                {
+                                    if (c is Form)
+                                    {
+
+                                        Form f = c as Form;
+                                        f.Close();
+                                        Menu m = new Menu();
+                                        m.Show();
+                                        MessageBox.Show("Game over");
+                                    }
+                                }
                             }
                         }
+                        else
+                        {
+                            en.followTarget();
+                        }
+
                     }
+                    if (le.getUp() && !le.getCollideUp())
+                    {
+                        p.Top -= speed;
                     }
                     else
                     {
-                        en.followTarget();
+                        le.setUp(false);
+                        le.setCollideUp(false);
+                    }
+                    if (le.getDown() && !le.getCollideDown())
+                    {
+                        p.Top += speed;
+                    }
+                    else
+                    {
+                        le.setDown(false);
+                        le.setCollideDown(false);
+                    }
+                    if (le.getRight() && !le.getCollideRight())
+                    {
+                        p.Left += speed;
+                    }
+                    else
+                    {
+                        le.setRight(false);
+                        le.setCollideRight(false);
+                    }
+                    if (le.getLeft() && !le.getCollideLeft())
+                    {
+                        p.Left -= speed;
+                    }
+                    else
+                    {
+                        le.setLeft(false);
+                        le.setCollideLeft(false);
                     }
 
                 }
-                if (le.getUp() && !le.getCollideUp())
-                {
-                    p.Top -= speed;
-                }
-                else
-                {
-                    le.setUp(false);
-                    le.setCollideUp(false);
-                }
-                if (le.getDown() && !le.getCollideDown())
-                {
-                    p.Top += speed;
-                }
-                else
-                {
-                    le.setDown(false);
-                    le.setCollideDown(false);
-                }
-                if (le.getRight() && !le.getCollideRight())
-                {
-                    p.Left += speed;
-                }
-                else
-                {
-                    le.setRight(false);
-                    le.setCollideRight(false);
-                }
-                if (le.getLeft() && !le.getCollideLeft())
-                {
-                    p.Left -= speed;
-                }
-                else
-                {
-                    le.setLeft(false);
-                    le.setCollideLeft(false);
-                }
-                
+
             }
+            catch { }
 
             try
             {
