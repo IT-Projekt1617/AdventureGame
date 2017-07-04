@@ -51,8 +51,6 @@ namespace AdventureGame
                     this.Close();
                 }
             }
-           
-        
             
         }
 
