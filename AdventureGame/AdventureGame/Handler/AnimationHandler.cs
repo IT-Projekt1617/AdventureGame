@@ -143,9 +143,9 @@ namespace AdventureGame.Handler
                     BackgroundImage = Image.FromFile(b.getPath()),
                     BorderStyle = BorderStyle.None,
                     BackgroundImageLayout = ImageLayout.Stretch,
-                    Location = new Point(x, y)
+                    Location = new Point(x - b.getRadius() / 2, y - b.getRadius() / 2)
 
-                };
+            };
                 activeanimation = picture;
                 c.Controls.Add(picture);
                 picture.BringToFront();
