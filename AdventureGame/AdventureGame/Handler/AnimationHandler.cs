@@ -30,35 +30,51 @@ namespace AdventureGame.Handler
 
             if (loc == Location.TOP)
             {
+                    try
+                    {
+                        Image im = Image.FromFile(i.getPath());
+                        activeanimation.Image = RotateImage(im, 0);
+                        activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Top - activeanimation.Height);
 
-                    Image im = Image.FromFile(i.getPath());
-                    activeanimation.Image = RotateImage(im, 0);
-                    activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Top - activeanimation.Height);
-               
-            }
+
+
+                    }
+                    catch { } }
             else if (loc == Location.BOT)
             {
 
+                    try
+                    {
+                        Image im = Image.FromFile(i.getPath());
+                        activeanimation.Image = RotateImage(im, 180);
+                        activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Bottom);
 
-                    Image im = Image.FromFile(i.getPath());
-                    activeanimation.Image = RotateImage(im, 180);
-                    activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Bottom);
+                    }
+                    catch { }
             }
             else if (loc == Location.RIGHT)
             {
+                    try
+                    {
+                        Image im = Image.FromFile(i.getPath());
+                        activeanimation.Image = RotateImage(im, 90);
+                        activeanimation.Location = new Point(p.getEntity().Right, p.getEntity().Location.Y + (activeanimation.Height / 2));
 
-                    Image im = Image.FromFile(i.getPath());
-                    activeanimation.Image = RotateImage(im, 90);
-                    activeanimation.Location = new Point(p.getEntity().Right, p.getEntity().Location.Y + (activeanimation.Height / 2));
+                    }
+                    catch { }
             }
             else if (loc == Location.LEFT)
             {
 
+                    try
+                    {
+                        Image im = Image.FromFile(i.getPath());
+                        activeanimation.Image = RotateImage(im, 270);
+                        activeanimation.Location = new Point(p.getEntity().Left - activeanimation.Width, p.getEntity().Location.Y + (activeanimation.Height / 2));
 
-                    Image im = Image.FromFile(i.getPath());
-                    activeanimation.Image = RotateImage(im, 270);
-                    activeanimation.Location = new Point(p.getEntity().Left - activeanimation.Width, p.getEntity().Location.Y + (activeanimation.Height / 2));
-            }
+
+                    }
+                    catch { } }
         }
         }
 
@@ -116,17 +132,17 @@ namespace AdventureGame.Handler
             }
         }
 
-        public static void bombAnimation(Bomb b, Control c)
+        public static void bombAnimation(int x, int y,Bomb b, Control c)
         {
             if (activeanimation == null)
             {
                 var picture = new PictureBox
                 {
                     Name = b.getName(),
-                    Size = new Size(32, 32),
+                    Size = new Size(b.getRadius(), b.getRadius()),
                     Image = Image.FromFile(b.getPath()),
                     BorderStyle = BorderStyle.None,
-                    Location = new Point(b.getPbox().Location.X, b.getPbox().Location.Y)
+                    Location = new Point(x, y)
 
                 };
                 activeanimation = picture;

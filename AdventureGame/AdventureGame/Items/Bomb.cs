@@ -17,6 +17,8 @@ namespace AdventureGame.Items
         private Boolean inUse;
         private PictureBox pb;
         private int r;
+        private int x;
+        private int y;
 
         public Bomb(string name, int damage,int radius, int Cooldown, Bitmap texturepath, string imagepath) : base(name, texturepath, imagepath)
         {
@@ -39,6 +41,8 @@ namespace AdventureGame.Items
                 BorderStyle = BorderStyle.None
 
             };
+            x = p.getEntity().Location.X;
+            y = p.getEntity().Location.Y;
             pb = picture;
             c.Controls.Add(picture);
             picture.BringToFront();
@@ -66,7 +70,7 @@ namespace AdventureGame.Items
         private void explode(Control c)
         {
 
-            AnimationHandler.bombAnimation(this,c);
+            AnimationHandler.bombAnimation(x,y,this,c);
 
             try {
                 foreach (LivingEntity le in LivingEntityHandler.getLivingEntitys())
@@ -122,6 +126,11 @@ namespace AdventureGame.Items
             pb.Dispose();
             pb = null;
 
+        }
+
+        public int getRadius()
+        {
+            return r;
         }
 
         private double getDistance(LivingEntity le)
