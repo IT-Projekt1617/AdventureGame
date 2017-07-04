@@ -140,8 +140,9 @@ namespace AdventureGame.Handler
                 {
                     Name = b.getName(),
                     Size = new Size(b.getRadius(), b.getRadius()),
-                    Image = Image.FromFile(b.getPath()),
+                    BackgroundImage = Image.FromFile(b.getPath()),
                     BorderStyle = BorderStyle.None,
+                    BackgroundImageLayout = ImageLayout.Stretch,
                     Location = new Point(x, y)
 
                 };

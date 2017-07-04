@@ -87,7 +87,7 @@ namespace AdventureGame
             Sword testsword = new Sword("Testsword",Properties.Resources.sword, "..\\..\\Resources\\sword.png", 2);
             testsword.drop(250, 250,this);
 
-            Bomb bomb = new Bomb("Bomb", 20, 150, 100, Properties.Resources.Ch_van_img_02, "..\\..\\Resources\\sword.png");
+            Bomb bomb = new Bomb("Bomb", 20, 150, 100, Properties.Resources.bomb, "..\\..\\Resources\\explosion.png");
             bomb.drop(500,500,this);
             
             Inventory.Inventory.aSlot = 1;

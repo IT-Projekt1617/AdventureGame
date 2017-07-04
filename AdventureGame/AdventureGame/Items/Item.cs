@@ -65,8 +65,9 @@ namespace AdventureGame.Items
                 Name = getName(),
                 Size = new Size(32, 32),
                 Location = new Point(x, y),
-                Image = tp,
-                BorderStyle = BorderStyle.Fixed3D
+                BackgroundImage = tp,
+                BorderStyle = BorderStyle.Fixed3D,
+                BackgroundImageLayout = ImageLayout.Stretch
 
             };
             p = picture;

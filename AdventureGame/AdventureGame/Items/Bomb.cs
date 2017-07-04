@@ -37,8 +37,9 @@ namespace AdventureGame.Items
                 Name = getName(),
                 Size = new Size(32, 32),
                 Location = new Point(p.getEntity().Location.X, p.getEntity().Location.Y),
-                Image = base.getTexturepath(),
-                BorderStyle = BorderStyle.None
+                BackgroundImage = base.getTexturepath(),
+                BorderStyle = BorderStyle.None,
+                BackgroundImageLayout = ImageLayout.Stretch
 
             };
             x = p.getEntity().Location.X;
