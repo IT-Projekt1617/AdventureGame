@@ -104,9 +104,11 @@ namespace AdventureGame
             }
 
         }
-        public static void Update(Panel panel,EventArgs e,Player player,Door d,Control c)
+
+        public static void Update(Label label,Panel panel,EventArgs e,Player player,Door d,Control c)
         {
 
+            label.Text = "Leben: " + player.getHealth() + "/" + player.getmaxHealth();
             AnimationHandler.setLocation(player,Inventory.Inventory.getaItem());
             CollisionHandler.calculatePlayerHit(player,c);
             d.testforNextLevel(player);
@@ -213,9 +215,40 @@ namespace AdventureGame
             
         }
 
-        public static void PaintEvent(Panel panel, PaintEventArgs e,Player player)
+
+
+        public static void Update2(Control c)
         {
-            //CollisionHandler.calculateCollisions(panel,player,Barrier.getBarrierList());
+            if (Inventory.Inventory.s1 != null)
+            {
+                Inventory.Inventory.ps1.Image = Inventory.Inventory.s1.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps1.Image = null;
+            }
+            if (Inventory.Inventory.s2 != null)
+            {
+                Inventory.Inventory.ps2.Image = Inventory.Inventory.s2.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps2.Image = null;
+            }
+            if (Inventory.Inventory.s3 != null)
+            {
+                Inventory.Inventory.ps3.Image = Inventory.Inventory.s3.getTexturepath();
+
+            }
+            else
+            {
+                Inventory.Inventory.ps3.Image = null;
+            }
+
+            LivingEntityHandler.reduceHurtDelay();
+            AnimationHandler.reduceanimationCD(c);
 
         }
 

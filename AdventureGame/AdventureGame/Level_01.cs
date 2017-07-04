@@ -63,13 +63,12 @@ namespace AdventureGame
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            CustomEventHandler.PaintEvent(panel1,e,p);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label7.Text = "Leben: "+p.getHealth()+"/"+p.getmaxHealth();
-            CustomEventHandler.Update(panel1,e,p,d,this);
+            CustomEventHandler.Update(label7,panel1,e,p,d,this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -116,38 +115,7 @@ namespace AdventureGame
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
-
-            if (Inventory.Inventory.s1 != null)
-            {
-                Inventory.Inventory.ps1.Image = Inventory.Inventory.s1.getTexturepath();
-
-            }
-            else
-            {
-                Inventory.Inventory.ps1.Image = null;
-            }
-            if (Inventory.Inventory.s2 != null)
-            {
-                Inventory.Inventory.ps2.Image = Inventory.Inventory.s2.getTexturepath();
-
-            }
-            else
-            {
-                Inventory.Inventory.ps2.Image = null;
-            }
-            if (Inventory.Inventory.s3 != null)
-            {
-                Inventory.Inventory.ps3.Image = Inventory.Inventory.s3.getTexturepath();
-
-            }
-            else
-            {
-                Inventory.Inventory.ps3.Image = null;
-            }
-
-            LivingEntityHandler.reduceHurtDelay();
-            AnimationHandler.reduceanimationCD(this);
+            CustomEventHandler.Update2(this);
         }
 
         private void Slot1_Click(object sender, EventArgs e)
