@@ -39,3 +39,6 @@ D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Char
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Menu.resources
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Settings.resources
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_02.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_03.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_04.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_05cs.resources
