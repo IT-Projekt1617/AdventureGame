@@ -33,7 +33,7 @@ namespace AdventureGame.Handler
                     try
                     {
                         Image im = Image.FromFile(i.getPath());
-                        activeanimation.Image = RotateImage(im, 0);
+                        activeanimation.BackgroundImage = RotateImage(im, 0);
                         activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Top - activeanimation.Height);
 
 
@@ -46,7 +46,7 @@ namespace AdventureGame.Handler
                     try
                     {
                         Image im = Image.FromFile(i.getPath());
-                        activeanimation.Image = RotateImage(im, 180);
+                        activeanimation.BackgroundImage = RotateImage(im, 180);
                         activeanimation.Location = new Point(p.getEntity().Location.X + (activeanimation.Width / 2), p.getEntity().Bottom);
 
                     }
@@ -57,7 +57,7 @@ namespace AdventureGame.Handler
                     try
                     {
                         Image im = Image.FromFile(i.getPath());
-                        activeanimation.Image = RotateImage(im, 90);
+                        activeanimation.BackgroundImage = RotateImage(im, 90);
                         activeanimation.Location = new Point(p.getEntity().Right, p.getEntity().Location.Y + (activeanimation.Height / 2));
 
                     }
@@ -69,7 +69,7 @@ namespace AdventureGame.Handler
                     try
                     {
                         Image im = Image.FromFile(i.getPath());
-                        activeanimation.Image = RotateImage(im, 270);
+                        activeanimation.BackgroundImage = RotateImage(im, 270);
                         activeanimation.Location = new Point(p.getEntity().Left - activeanimation.Width, p.getEntity().Location.Y + (activeanimation.Height / 2));
 
 
@@ -115,8 +115,9 @@ namespace AdventureGame.Handler
                 {
                     Name = i.getName(),
                     Size = new Size(32, 32),
-                    Image = i.getTexturepath(),
+                    BackgroundImage = i.getTexturepath(),
                     BorderStyle = BorderStyle.None,
+                    BackgroundImageLayout = ImageLayout.Stretch,
                     BackColor = Color.Transparent
 
                 };

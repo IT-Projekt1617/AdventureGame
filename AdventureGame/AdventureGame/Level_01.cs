@@ -131,5 +131,10 @@ namespace AdventureGame
         {
 
         }
+
+        private void barrier2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
