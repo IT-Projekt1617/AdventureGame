@@ -62,7 +62,8 @@ namespace AdventureGame
         //button3
         private void button3_Click(object sender, EventArgs e)
         {
-
+            DialogResult result;
+            result = MessageBox.Show("Spielstand gespeichert.", "Speichern", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
    

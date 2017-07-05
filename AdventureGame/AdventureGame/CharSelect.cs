@@ -24,8 +24,6 @@ namespace AdventureGame
         {
             Level_01 l = new Level_01();
             Char = 1;
-            Menu m = new Menu();
-
             l.Show();
             this.Close();
             
@@ -35,7 +33,6 @@ namespace AdventureGame
         {
             Level_01 l = new Level_01();
             Char = 2;
-            Menu m = new Menu();
             l.Show();
             this.Close();
         }
@@ -44,5 +41,11 @@ namespace AdventureGame
             return Char;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            this.Close();
+        }
     }
 }

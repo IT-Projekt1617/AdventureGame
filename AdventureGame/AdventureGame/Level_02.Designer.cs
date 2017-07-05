@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.player = new System.Windows.Forms.PictureBox();
+            this.door = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.player = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.door = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,15 +60,24 @@
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
             // 
-            // player
+            // door
             // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.player.Location = new System.Drawing.Point(1192, 619);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(60, 50);
-            this.player.TabIndex = 1;
-            this.player.TabStop = false;
+            this.door.BackColor = System.Drawing.Color.Transparent;
+            this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.door.Location = new System.Drawing.Point(46, 107);
+            this.door.Name = "door";
+            this.door.Size = new System.Drawing.Size(75, 75);
+            this.door.TabIndex = 15;
+            this.door.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
             // 
             // Slot1
             // 
@@ -103,14 +112,15 @@
             this.Slot3.TabIndex = 13;
             this.Slot3.TabStop = false;
             // 
-            // label7
+            // player
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
+            this.player.BackColor = System.Drawing.Color.Transparent;
+            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.player.Location = new System.Drawing.Point(1192, 619);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(60, 50);
+            this.player.TabIndex = 1;
+            this.player.TabStop = false;
             // 
             // timer1
             // 
@@ -121,22 +131,15 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // door
-            // 
-            this.door.BackColor = System.Drawing.Color.Transparent;
-            this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.door.Location = new System.Drawing.Point(46, 107);
-            this.door.Name = "door";
-            this.door.Size = new System.Drawing.Size(75, 75);
-            this.door.TabIndex = 15;
-            this.door.TabStop = false;
-            // 
             // Level_02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Level_02";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Level_02";
@@ -145,11 +148,11 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_02_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
