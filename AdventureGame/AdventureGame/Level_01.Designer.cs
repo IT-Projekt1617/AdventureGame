@@ -72,6 +72,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.ghost1);
             this.panel1.Controls.Add(this.door);
             this.panel1.Controls.Add(this.enemy1);
@@ -178,10 +179,11 @@
             // barrier1
             // 
             this.barrier1.BackColor = System.Drawing.Color.Transparent;
-            this.barrier1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barrier1.Location = new System.Drawing.Point(421, 185);
+            this.barrier1.BackgroundImage = global::AdventureGame.Properties.Resources.tree;
+            this.barrier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.barrier1.Location = new System.Drawing.Point(530, 240);
             this.barrier1.Name = "barrier1";
-            this.barrier1.Size = new System.Drawing.Size(404, 236);
+            this.barrier1.Size = new System.Drawing.Size(128, 192);
             this.barrier1.TabIndex = 1;
             this.barrier1.TabStop = false;
             // 
