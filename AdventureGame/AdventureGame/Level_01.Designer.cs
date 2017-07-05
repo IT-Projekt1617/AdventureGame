@@ -179,7 +179,7 @@
             this.barrier2.BackgroundImage = global::AdventureGame.Properties.Resources.rock;
             this.barrier2.Location = new System.Drawing.Point(263, 436);
             this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(128, 147);
+            this.barrier2.Size = new System.Drawing.Size(128, 132);
             this.barrier2.TabIndex = 7;
             this.barrier2.TabStop = false;
             this.barrier2.Click += new System.EventHandler(this.barrier2_Click);
@@ -194,6 +194,7 @@
             this.barrier1.Size = new System.Drawing.Size(128, 147);
             this.barrier1.TabIndex = 1;
             this.barrier1.TabStop = false;
+            this.barrier1.Click += new System.EventHandler(this.barrier1_Click);
             // 
             // player
             // 

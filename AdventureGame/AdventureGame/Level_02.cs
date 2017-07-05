@@ -69,5 +69,10 @@ namespace AdventureGame
 
             CustomEventHandler.KeyUp(panel1, e, p, this);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

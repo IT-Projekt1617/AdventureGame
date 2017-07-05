@@ -228,5 +228,11 @@
   <ItemGroup>
     <None Include="Resources\rock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nighttree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nightrock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
