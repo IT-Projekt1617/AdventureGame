@@ -30,11 +30,11 @@ namespace AdventureGame.Terrain
             p = pb;
             if (o)
             {
-                p.Image = oT;
+                p.BackgroundImage = oT;
             }
             else
             {
-                p.Image = cT;
+                p.BackgroundImage = cT;
             }
 
         }
@@ -47,13 +47,13 @@ namespace AdventureGame.Terrain
         public void setOpen()
         {
             o = true;
-            p.Image = oT;
+            p.BackgroundImage = oT;
 
         }
         public void setClosed()
         {
             o = false;
-            p.Image = cT;
+            p.BackgroundImage = cT;
         }
 
         public void testforNextLevel(Player player)

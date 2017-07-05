@@ -105,7 +105,8 @@
             // 
             // ghost1
             // 
-            this.ghost1.BackColor = System.Drawing.Color.Aquamarine;
+            this.ghost1.BackColor = System.Drawing.Color.Transparent;
+            this.ghost1.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
             this.ghost1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ghost1.Location = new System.Drawing.Point(916, 619);
             this.ghost1.Name = "ghost1";
@@ -116,6 +117,7 @@
             // door
             // 
             this.door.BackColor = System.Drawing.Color.Transparent;
+            this.door.BackgroundImage = global::AdventureGame.Properties.Resources.opendoor;
             this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.door.Location = new System.Drawing.Point(1177, 594);
             this.door.Name = "door";
@@ -125,7 +127,8 @@
             // 
             // enemy1
             // 
-            this.enemy1.BackColor = System.Drawing.Color.DarkRed;
+            this.enemy1.BackColor = System.Drawing.Color.Transparent;
+            this.enemy1.BackgroundImage = global::AdventureGame.Properties.Resources.zombie;
             this.enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.enemy1.Location = new System.Drawing.Point(1080, 185);
             this.enemy1.Name = "enemy1";
