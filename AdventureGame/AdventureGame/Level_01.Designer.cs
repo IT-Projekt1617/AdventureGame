@@ -32,17 +32,17 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.ghost1 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
@@ -90,6 +90,18 @@
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(8, 681);
+            this.splitter1.TabIndex = 9;
+            this.splitter1.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // ghost1
             // 
@@ -158,14 +170,6 @@
             this.Slot3.TabStop = false;
             this.Slot3.Click += new System.EventHandler(this.Slot3_Click);
             // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(8, 681);
-            this.splitter1.TabIndex = 9;
-            this.splitter1.TabStop = false;
-            // 
             // barrier2
             // 
             this.barrier2.BackColor = System.Drawing.Color.Transparent;
@@ -180,10 +184,10 @@
             // 
             this.barrier1.BackColor = System.Drawing.Color.Transparent;
             this.barrier1.BackgroundImage = global::AdventureGame.Properties.Resources.tree;
-            this.barrier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.barrier1.Location = new System.Drawing.Point(530, 240);
+            this.barrier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier1.Location = new System.Drawing.Point(530, 281);
             this.barrier1.Name = "barrier1";
-            this.barrier1.Size = new System.Drawing.Size(128, 192);
+            this.barrier1.Size = new System.Drawing.Size(128, 147);
             this.barrier1.TabIndex = 1;
             this.barrier1.TabStop = false;
             // 
@@ -197,10 +201,6 @@
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Level_01
             // 
