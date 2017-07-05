@@ -106,6 +106,10 @@ namespace AdventureGame
             button4.BackColor = SystemColors.ActiveCaption;
         }
 
-        
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Speicherstand beschädigt. Laden nicht möglich.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

@@ -67,6 +67,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "Load";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
