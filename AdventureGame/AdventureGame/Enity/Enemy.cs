@@ -46,7 +46,7 @@ namespace AdventureGame.Enity
             if(getEntity().Visible){
             if (t != null)
             {
-                if (t.Bottom < getEntity().Top)
+                if (t.Bottom-10 < getEntity().Top)
                 {
                     if (!getCollideUp())
                     {
@@ -59,7 +59,7 @@ namespace AdventureGame.Enity
                     }
                 }
 
-                if (t.Top > getEntity().Bottom)
+                if (t.Top+10 > getEntity().Bottom)
                 {
                     if (!getCollideDown())
                     {
@@ -72,7 +72,7 @@ namespace AdventureGame.Enity
                     }
                 }
 
-                if (t.Right < getEntity().Left)
+                if (t.Right-10 < getEntity().Left)
                 {
                     if (!getCollideLeft())
                     {
@@ -85,7 +85,7 @@ namespace AdventureGame.Enity
                     }
                 }
 
-                if (t.Left > getEntity().Right)
+                if (t.Left+10 > getEntity().Right)
                 {
                     if (!getCollideRight())
                     {

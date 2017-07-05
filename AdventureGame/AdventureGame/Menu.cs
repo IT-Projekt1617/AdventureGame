@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventureGame.Terrain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,8 @@ namespace AdventureGame
 {
     public partial class Menu : Form
     {
+
+
         Settings s = new Settings();
         public Menu()
         {
@@ -43,7 +46,7 @@ namespace AdventureGame
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            
             CharSelect cs = new CharSelect();
             cs.Show();
             this.Visible = false;

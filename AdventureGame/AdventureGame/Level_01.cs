@@ -17,6 +17,7 @@ namespace AdventureGame
     public partial class Level_01 : Form
     {
         
+
         Player p;
         Zombie z;
         Ghost g;
@@ -24,13 +25,6 @@ namespace AdventureGame
         public Level_01()
         {
             InitializeComponent();
-
-            p = new Player(player, 10, 20, 20, 0, null);
-            z = new Zombie(enemy1,5,10,10,2,new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null),null,p.getEntity());
-            g = new Ghost(ghost1, 2, 5, 5, 3, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
-            Barrier.addBarrier(barrier1);
-            Barrier.addBarrier(barrier2);
-            d = new Door(this,new Level_02(),true,Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
                
         }
 
@@ -40,17 +34,6 @@ namespace AdventureGame
         {
             CustomEventHandler.KeyDown(e, p,this);
 
-            DialogResult result; 
-            if (e.KeyCode == Keys.Escape)
-            {
-                 result= MessageBox.Show("Are you sure you wanna quit this 1337 game ?", "Exit", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    Menu m =new Menu();
-                    m.Visible = true;
-                    this.Close();
-                }
-            }
             
         }
 
@@ -82,6 +65,19 @@ namespace AdventureGame
         private void Level_01_Load(object sender, EventArgs e)
         {
 
+
+            p = new Player(player, 10, 20, 20, 0, null);
+            z = new Zombie(enemy1, 5, 10, 10, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            g = new Ghost(ghost1, 2, 5, 5, 3, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            Barrier.addBarrier(barrier1);
+            Barrier.addBarrier(barrier2);
+            d = new Door(this, new Level_02(), true, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
+
+            timer1.Start();
+            Door.Timerlist.Add(timer1);
+            timer2.Start();
+            Door.Timerlist.Add(timer2);
+
             Sword testsword = new Sword("Testsword",Properties.Resources.sword, "..\\..\\Resources\\sword.png", 2);
             testsword.drop(250, 250,this);
 
@@ -102,7 +98,6 @@ namespace AdventureGame
                 p.setTexturepath(Properties.Resources.Ch_van_img_03);
 
             }
-            //this.z.setTarget(p.getEntity());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -128,6 +123,11 @@ namespace AdventureGame
         }
 
         private void enemy1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

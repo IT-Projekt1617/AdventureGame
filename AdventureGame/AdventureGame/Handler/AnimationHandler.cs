@@ -116,7 +116,8 @@ namespace AdventureGame.Handler
                     Name = i.getName(),
                     Size = new Size(32, 32),
                     Image = i.getTexturepath(),
-                    BorderStyle = BorderStyle.None
+                    BorderStyle = BorderStyle.None,
+                    BackColor = Color.Transparent
 
                 };
 
@@ -143,9 +144,10 @@ namespace AdventureGame.Handler
                     BackgroundImage = Image.FromFile(b.getPath()),
                     BorderStyle = BorderStyle.None,
                     BackgroundImageLayout = ImageLayout.Stretch,
-                    Location = new Point(x - b.getRadius() / 2, y - b.getRadius() / 2)
+                    Location = new Point(x - b.getRadius() / 2, y - b.getRadius() / 2),
+                    BackColor = Color.Transparent
 
-            };
+                };
                 activeanimation = picture;
                 c.Controls.Add(picture);
                 picture.BringToFront();

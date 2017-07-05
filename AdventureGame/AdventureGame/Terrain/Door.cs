@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventureGame.Handler;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace AdventureGame.Terrain
         private Bitmap oT;
         private Bitmap cT;
         private PictureBox p;
+
+        public static List<Timer> Timerlist = new List<Timer>();
 
         public Door(Form Level,Form nextLevel,Boolean open,Bitmap openT,Bitmap closedT,PictureBox pb)
         {
@@ -59,6 +62,19 @@ namespace AdventureGame.Terrain
             {
                 if (player.getEntity().Bounds.IntersectsWith(p.Bounds))
                 {
+
+                    Barrier.getBarrierList().Clear();
+                    LivingEntityHandler.clearLivingEntityList();
+                    LivingEntityHandler.clearEnemyList();
+                    ItemHandler.clearBombList();
+                    ItemHandler.clearItemList();
+
+                    foreach (Timer l in Timerlist)
+                    {
+                        l.Stop();
+                    }
+
+                    Timerlist.Clear();
                     nL.Show();
                     L.Close();
                 }

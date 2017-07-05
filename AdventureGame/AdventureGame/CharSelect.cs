@@ -24,6 +24,8 @@ namespace AdventureGame
         {
             Level_01 l = new Level_01();
             Char = 1;
+            Menu m = new Menu();
+
             l.Show();
             this.Close();
             
@@ -33,6 +35,7 @@ namespace AdventureGame
         {
             Level_01 l = new Level_01();
             Char = 2;
+            Menu m = new Menu();
             l.Show();
             this.Close();
         }

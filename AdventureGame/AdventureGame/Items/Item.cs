@@ -67,7 +67,8 @@ namespace AdventureGame.Items
                 Location = new Point(x, y),
                 BackgroundImage = tp,
                 BorderStyle = BorderStyle.Fixed3D,
-                BackgroundImageLayout = ImageLayout.Stretch
+                BackgroundImageLayout = ImageLayout.Stretch,
+                BackColor = Color.Transparent
 
             };
             p = picture;
