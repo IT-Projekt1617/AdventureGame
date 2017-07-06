@@ -54,8 +54,8 @@ namespace AdventureGame
 
 
             z = new Zombie(enemy1, 3, 10, 10, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
-            g = new Ghost(ghost1, 1, 8, 8, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
-            g2 = new Ghost(ghost2, 1, 8, 8, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            g = new Ghost(ghost1, 1, 8, 8, 2, new Bomb("Bomb", 20, 150, 100, Properties.Resources.bomb, "..\\..\\Resources\\explosion.png"), null, p.getEntity());
+            g2 = new Ghost(ghost2, 1, 8, 8, 2, new Bomb("Bomb", 20, 150, 100, Properties.Resources.bomb, "..\\..\\Resources\\explosion.png"), null, p.getEntity());
 
             if (CharSelect.Char == 2)
             {

@@ -282,5 +282,17 @@
   <ItemGroup>
     <None Include="Resources\langschwert.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\katana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treasure_open_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treasure_closed_blue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

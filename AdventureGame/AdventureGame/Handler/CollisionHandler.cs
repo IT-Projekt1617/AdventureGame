@@ -251,16 +251,19 @@ namespace AdventureGame.Handler
 
 
                 } catch {
-                    foreach (Enemy en in LivingEntityHandler.getEnemys())
-                    {
-                        if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                    try {
+                        foreach (Enemy en in LivingEntityHandler.getEnemys())
                         {
-                            Item i = Inventory.Inventory.getaItem();
-                            Sword s = i as Sword;
-                            en.Damage(p.getDamage() + s.getDamage(), c);
+                            if (pbox.Bounds.IntersectsWith(en.getEntity().Bounds))
+                            {
+                                Item i = Inventory.Inventory.getaItem();
+                                Sword s = i as Sword;
+                                en.Damage(p.getDamage() + s.getDamage(), c);
 
+                            }
                         }
-                    }
+                    } catch { }
+                    
                 }
             }
             
