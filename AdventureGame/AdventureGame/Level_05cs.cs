@@ -58,11 +58,11 @@ namespace AdventureGame
 
             if (CharSelect.Char == 2)
             {
-                p.setTexturepath(Properties.Resources.Ch_cho_img_03);
+                p.setTexturepath(Properties.Resources.kuro_chibi);
             }
             else if (CharSelect.Char == 1)
             {
-                p.setTexturepath(Properties.Resources.Ch_van_img_03);
+                p.setTexturepath(Properties.Resources.shiro_chibi);
 
             }
         }

@@ -303,6 +303,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kuro_chibi {
+            get {
+                object obj = ResourceManager.GetObject("kuro_chibi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kuro1 {
             get {
                 object obj = ResourceManager.GetObject("kuro1", resourceCulture);
@@ -396,6 +406,26 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap shiro {
             get {
                 object obj = ResourceManager.GetObject("shiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shiro_chibi {
+            get {
+                object obj = ResourceManager.GetObject("shiro_chibi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shiro1 {
+            get {
+                object obj = ResourceManager.GetObject("shiro1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

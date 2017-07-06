@@ -306,5 +306,11 @@
   <ItemGroup>
     <None Include="Resources\keyboard-esc-escape-function-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuro_chibi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shiro_chibi.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

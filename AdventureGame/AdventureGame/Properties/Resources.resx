@@ -121,6 +121,9 @@
   <data name="doppelseitiges_kuna1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doppelseitiges_kuna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="treasure_open_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\treasure_open_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ghost" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,6 +139,9 @@
   <data name="Hpotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hpotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doppelseitiges_kuna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doppelseitiges_kuna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nighttree_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nighttree_stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +151,11 @@
   <data name="nighttree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nighttree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="langschwert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\langschwert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kuro_chibi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kuro_chibi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doppelseitiges_kuna" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doppelseitiges_kuna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="keyboard-esc-escape-function-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard-esc-escape-function-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nightrock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nightrock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,8 @@
   <data name="boss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="treasure_open_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\treasure_open_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="langschwert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\langschwert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2017-7-6s_34820" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2017-7-6s_34820.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -186,9 +192,6 @@
   </data>
   <data name="item (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\item (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree_stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dolch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dolch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +214,8 @@
   <data name="Ch_van_img_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ch_van_img_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="katana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\katana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tree_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree_stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +225,9 @@
   </data>
   <data name="tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="katana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\katana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2017-7-6_34332" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2017-7-6_34332.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +250,10 @@
   <data name="closeddoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closeddoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="keyboard-esc-escape-function-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keyboard-esc-escape-function-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shiro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shiro_chibi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shiro_chibi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

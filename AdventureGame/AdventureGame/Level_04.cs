@@ -60,14 +60,14 @@ namespace AdventureGame
 
             if (CharSelect.Char == 2)
             {
-                p.setTexturepath(Properties.Resources.Ch_cho_img_03);
+                p.setTexturepath(Properties.Resources.kuro_chibi);
             }
             else if (CharSelect.Char == 1)
             {
-                p.setTexturepath(Properties.Resources.Ch_van_img_03);
+                p.setTexturepath(Properties.Resources.shiro_chibi);
 
             }
-            
+
             Sword testsword = new Sword("Katana", Properties.Resources.katana, "..\\..\\Resources\\katana.png", 10);
             testsword.drop(1200, 620, this);
         }
