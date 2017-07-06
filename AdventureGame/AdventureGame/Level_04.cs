@@ -49,7 +49,7 @@ namespace AdventureGame
             }
             
             Sword testsword = new Sword("Testsword", Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
-            testsword.drop(1260, 675, this);
+            testsword.drop(1200, 620, this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
