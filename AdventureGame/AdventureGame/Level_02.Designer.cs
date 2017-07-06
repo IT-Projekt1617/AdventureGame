@@ -30,24 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.door = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.ghost1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ghost1);
             this.panel1.Controls.Add(this.door);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.Slot1);
@@ -61,24 +64,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // door
             // 
             this.door.BackColor = System.Drawing.Color.Transparent;
@@ -88,6 +73,15 @@
             this.door.Size = new System.Drawing.Size(75, 75);
             this.door.TabIndex = 15;
             this.door.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
             // 
             // Slot1
             // 
@@ -132,6 +126,26 @@
             this.player.TabIndex = 1;
             this.player.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // ghost1
+            // 
+            this.ghost1.BackColor = System.Drawing.Color.Transparent;
+            this.ghost1.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
+            this.ghost1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ghost1.Location = new System.Drawing.Point(696, 318);
+            this.ghost1.Name = "ghost1";
+            this.ghost1.Size = new System.Drawing.Size(60, 50);
+            this.ghost1.TabIndex = 16;
+            this.ghost1.TabStop = false;
+            // 
             // Level_02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +184,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox door;
+        private System.Windows.Forms.PictureBox ghost1;
     }
 }

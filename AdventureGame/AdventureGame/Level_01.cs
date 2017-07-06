@@ -20,7 +20,6 @@ namespace AdventureGame
 
         Player p;
         Zombie z;
-        Ghost g;
         Door d;
         public Level_01()
         {
@@ -68,7 +67,6 @@ namespace AdventureGame
 
             p = new Player(player, 10, 20, 20, 0, null);
             z = new Zombie(enemy1, 5, 10, 10, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
-            g = new Ghost(ghost1, 2, 5, 5, 3, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
             d = new Door(this, new Level_02(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
@@ -79,7 +77,7 @@ namespace AdventureGame
             Door.Timerlist.Add(timer2);
 
             Sword testsword = new Sword("Testsword",Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
-            testsword.drop(250, 250,this);
+            testsword.drop(250, 50,this);
 
             Bomb bomb = new Bomb("Bomb", 20, 150, 100, Properties.Resources.bomb, "..\\..\\Resources\\explosion.png");
             bomb.drop(500,500,this);
@@ -138,6 +136,11 @@ namespace AdventureGame
         }
 
         private void barrier1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ghost1_Click(object sender, EventArgs e)
         {
 
         }
