@@ -1,4 +1,5 @@
-﻿using AdventureGame.Terrain;
+﻿using AdventureGame.Handler;
+using AdventureGame.Terrain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +47,17 @@ namespace AdventureGame
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
+            Barrier.getBarrierList().Clear();
+            LivingEntityHandler.clearLivingEntityList();
+            LivingEntityHandler.clearEnemyList();
+            ItemHandler.clearBombList();
+            ItemHandler.clearItemList();
+            Inventory.Inventory.s1 = null;
+            Inventory.Inventory.s2 = null;
+            Inventory.Inventory.s3 = null;
+            Inventory.Inventory.aSlot = 1;
+
             CharSelect cs = new CharSelect();
             cs.Show();
             this.Visible = false;
