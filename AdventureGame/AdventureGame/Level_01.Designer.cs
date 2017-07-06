@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.barrier3 = new System.Windows.Forms.PictureBox();
             this.ghost1 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
@@ -44,8 +45,8 @@
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
-            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -108,6 +108,17 @@
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // barrier4
+            // 
+            this.barrier4.BackColor = System.Drawing.Color.Transparent;
+            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.two_trees;
+            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier4.Location = new System.Drawing.Point(863, 149);
+            this.barrier4.Name = "barrier4";
+            this.barrier4.Size = new System.Drawing.Size(128, 147);
+            this.barrier4.TabIndex = 17;
+            this.barrier4.TabStop = false;
             // 
             // barrier3
             // 
@@ -224,17 +235,6 @@
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
             // 
-            // barrier4
-            // 
-            this.barrier4.BackColor = System.Drawing.Color.Transparent;
-            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.two_trees;
-            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier4.Location = new System.Drawing.Point(863, 149);
-            this.barrier4.Name = "barrier4";
-            this.barrier4.Size = new System.Drawing.Size(128, 147);
-            this.barrier4.TabIndex = 17;
-            this.barrier4.TabStop = false;
-            // 
             // Level_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +251,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
@@ -261,7 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             this.ResumeLayout(false);
 
         }

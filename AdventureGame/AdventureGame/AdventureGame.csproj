@@ -240,5 +240,17 @@
   <ItemGroup>
     <None Include="Resources\nighttree_stump.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two_trees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nighttwo_trees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doppelseitiges_kuna.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
