@@ -116,7 +116,7 @@
             this.barrier3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.barrier3.Location = new System.Drawing.Point(816, 281);
             this.barrier3.Name = "barrier3";
-            this.barrier3.Size = new System.Drawing.Size(128, 83);
+            this.barrier3.Size = new System.Drawing.Size(120, 74);
             this.barrier3.TabIndex = 16;
             this.barrier3.TabStop = false;
             // 
@@ -124,9 +124,9 @@
             // 
             this.barrier7.BackColor = System.Drawing.Color.Transparent;
             this.barrier7.BackgroundImage = global::AdventureGame.Properties.Resources.rock;
-            this.barrier7.Location = new System.Drawing.Point(691, 388);
+            this.barrier7.Location = new System.Drawing.Point(696, 393);
             this.barrier7.Name = "barrier7";
-            this.barrier7.Size = new System.Drawing.Size(128, 131);
+            this.barrier7.Size = new System.Drawing.Size(123, 119);
             this.barrier7.TabIndex = 23;
             this.barrier7.TabStop = false;
             // 
@@ -167,9 +167,9 @@
             this.barrier4.BackColor = System.Drawing.Color.Transparent;
             this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.two_trees;
             this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier4.Location = new System.Drawing.Point(398, 71);
+            this.barrier4.Location = new System.Drawing.Point(395, 95);
             this.barrier4.Name = "barrier4";
-            this.barrier4.Size = new System.Drawing.Size(128, 171);
+            this.barrier4.Size = new System.Drawing.Size(128, 144);
             this.barrier4.TabIndex = 17;
             this.barrier4.TabStop = false;
             // 
@@ -244,9 +244,9 @@
             // 
             this.barrier2.BackColor = System.Drawing.Color.Transparent;
             this.barrier2.BackgroundImage = global::AdventureGame.Properties.Resources.rock;
-            this.barrier2.Location = new System.Drawing.Point(130, 158);
+            this.barrier2.Location = new System.Drawing.Point(130, 162);
             this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(128, 511);
+            this.barrier2.Size = new System.Drawing.Size(128, 507);
             this.barrier2.TabIndex = 7;
             this.barrier2.TabStop = false;
             this.barrier2.Click += new System.EventHandler(this.barrier2_Click);
@@ -279,9 +279,9 @@
             this.barrier8.BackColor = System.Drawing.Color.Transparent;
             this.barrier8.BackgroundImage = global::AdventureGame.Properties.Resources.two_trees;
             this.barrier8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier8.Location = new System.Drawing.Point(962, 126);
+            this.barrier8.Location = new System.Drawing.Point(961, 117);
             this.barrier8.Name = "barrier8";
-            this.barrier8.Size = new System.Drawing.Size(128, 164);
+            this.barrier8.Size = new System.Drawing.Size(128, 140);
             this.barrier8.TabIndex = 22;
             this.barrier8.TabStop = false;
             // 
