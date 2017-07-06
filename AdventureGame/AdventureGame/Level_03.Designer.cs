@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ghost2 = new System.Windows.Forms.PictureBox();
@@ -41,17 +44,14 @@
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier7 = new System.Windows.Forms.PictureBox();
             this.barrier3 = new System.Windows.Forms.PictureBox();
-            this.nobarrier = new System.Windows.Forms.PictureBox();
+            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.barrier9 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.barrier4 = new System.Windows.Forms.PictureBox();
+            this.nobarrier = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,14 +64,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +103,24 @@
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // player
             // 
@@ -220,16 +238,16 @@
             this.barrier3.TabIndex = 21;
             this.barrier3.TabStop = false;
             // 
-            // nobarrier
+            // barrier4
             // 
-            this.nobarrier.BackColor = System.Drawing.Color.Transparent;
-            this.nobarrier.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
-            this.nobarrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.nobarrier.Location = new System.Drawing.Point(708, 396);
-            this.nobarrier.Name = "nobarrier";
-            this.nobarrier.Size = new System.Drawing.Size(128, 79);
-            this.nobarrier.TabIndex = 19;
-            this.nobarrier.TabStop = false;
+            this.barrier4.BackColor = System.Drawing.Color.Transparent;
+            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
+            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier4.Location = new System.Drawing.Point(446, 97);
+            this.barrier4.Name = "barrier4";
+            this.barrier4.Size = new System.Drawing.Size(128, 147);
+            this.barrier4.TabIndex = 20;
+            this.barrier4.TabStop = false;
             // 
             // barrier9
             // 
@@ -261,15 +279,6 @@
             this.door.TabIndex = 15;
             this.door.TabStop = false;
             this.door.Click += new System.EventHandler(this.door_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
             // 
             // Slot1
             // 
@@ -304,25 +313,16 @@
             this.Slot3.TabIndex = 13;
             this.Slot3.TabStop = false;
             // 
-            // timer1
+            // nobarrier
             // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // barrier4
-            // 
-            this.barrier4.BackColor = System.Drawing.Color.Transparent;
-            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
-            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier4.Location = new System.Drawing.Point(446, 97);
-            this.barrier4.Name = "barrier4";
-            this.barrier4.Size = new System.Drawing.Size(128, 147);
-            this.barrier4.TabIndex = 20;
-            this.barrier4.TabStop = false;
+            this.nobarrier.BackColor = System.Drawing.Color.Transparent;
+            this.nobarrier.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
+            this.nobarrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.nobarrier.Location = new System.Drawing.Point(708, 396);
+            this.nobarrier.Name = "nobarrier";
+            this.nobarrier.Size = new System.Drawing.Size(128, 79);
+            this.nobarrier.TabIndex = 19;
+            this.nobarrier.TabStop = false;
             // 
             // Level_03
             // 
@@ -351,14 +351,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).EndInit();
             this.ResumeLayout(false);
 
         }

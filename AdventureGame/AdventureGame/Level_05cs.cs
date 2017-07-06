@@ -1,4 +1,6 @@
-﻿using AdventureGame.Terrain;
+﻿using AdventureGame.Enity;
+using AdventureGame.Items;
+using AdventureGame.Terrain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace AdventureGame
 
         Player p;
         Door d;
+        Zombie Boss;
         public Level_05cs()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace AdventureGame
         {
 
             p = new Player(player, 10, 20, 20, 0, null);
-            d = new Door(this, new Menu(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
+            d = new Door(this, new Menu(), false, Properties.Resources.treasure_open_blue, Properties.Resources.treasure_closed_blue, door);
 
             timer1.Start();
             Door.Timerlist.Add(timer1);
@@ -35,6 +38,23 @@ namespace AdventureGame
             Inventory.Inventory.ps1 = Slot1;
             Inventory.Inventory.ps2 = Slot2;
             Inventory.Inventory.ps3 = Slot3;
+
+            Barrier.addBarrier(barrier1);
+            Barrier.addBarrier(barrier3);
+            Barrier.addBarrier(barrier8);
+            Barrier.addBarrier(pictureBox1);
+            Barrier.addBarrier(pictureBox10);
+            Barrier.addBarrier(pictureBox11);
+            Barrier.addBarrier(pictureBox2);
+            Barrier.addBarrier(pictureBox3);
+            Barrier.addBarrier(pictureBox4);
+            Barrier.addBarrier(pictureBox5);
+            Barrier.addBarrier(pictureBox6);
+            Barrier.addBarrier(pictureBox7);
+            Barrier.addBarrier(pictureBox8);
+            Barrier.addBarrier(pictureBox9);
+
+            Boss = new Zombie(enemy1, 6, 100, 100, 6, new HealthPotion("Health Potion", 100, Properties.Resources.Hpotion, null), null, p.getEntity());
 
             if (CharSelect.Char == 2)
             {

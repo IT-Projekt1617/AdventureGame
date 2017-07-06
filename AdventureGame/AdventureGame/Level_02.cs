@@ -1,4 +1,5 @@
-﻿using AdventureGame.Handler;
+﻿using AdventureGame.Enity;
+using AdventureGame.Handler;
 using AdventureGame.Items;
 using AdventureGame.Terrain;
 using System;
@@ -18,6 +19,8 @@ namespace AdventureGame
 
         Player p;
         Door d;
+        Zombie z;
+        Ghost g;
         public Level_02()
         {
             InitializeComponent();
@@ -28,7 +31,21 @@ namespace AdventureGame
         {
             p = new Player(player, 10, 20, 20, 0, null);
             d = new Door(this, new Level_03(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
-        
+            z = new Zombie(enemy1, 3, 10, 10, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            g = new Ghost(ghost1, 1, 8,8, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            Barrier.addBarrier(barrier1);
+            Barrier.addBarrier(barrier2);
+            Barrier.addBarrier(barrier3);
+            Barrier.addBarrier(barrier4);
+            Barrier.addBarrier(barrier5);
+            Barrier.addBarrier(barrier6);
+            Barrier.addBarrier(barrier7);
+            Barrier.addBarrier(barrier8);
+
+
+            Sword testsword = new Sword("Testsword", Properties.Resources.langschwert, "..\\..\\Resources\\langschwert.png", 3);
+            testsword.drop(50, 550, this);
+
             timer1.Start();
             Door.Timerlist.Add(timer1);
             timer2.Start();
@@ -47,9 +64,6 @@ namespace AdventureGame
                 p.setTexturepath(Properties.Resources.Ch_van_img_03);
 
             }
-
-            Sword testsword = new Sword("Testsword", Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
-            testsword.drop(125, 300, this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using AdventureGame.Items;
+﻿using AdventureGame.Enity;
+using AdventureGame.Items;
 using AdventureGame.Terrain;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,9 @@ namespace AdventureGame
 
         Player p;
         Door d;
+        Zombie z;
+        Ghost g;
+        Ghost g2;
         public Level_03()
         {
             InitializeComponent();
@@ -37,6 +41,22 @@ namespace AdventureGame
             Inventory.Inventory.ps2 = Slot2;
             Inventory.Inventory.ps3 = Slot3;
 
+            Barrier.addBarrier(barrier1);
+            Barrier.addBarrier(barrier2);
+            Barrier.addBarrier(barrier3);
+            Barrier.addBarrier(barrier4);
+            Barrier.addBarrier(barrier5);
+            Barrier.addBarrier(barrier6);
+            Barrier.addBarrier(barrier7);
+            Barrier.addBarrier(barrier9);
+            Barrier.addBarrier(pictureBox6);
+            Barrier.addBarrier(pictureBox1);
+
+
+            z = new Zombie(enemy1, 3, 10, 10, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            g = new Ghost(ghost1, 1, 8, 8, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+            g2 = new Ghost(ghost2, 1, 8, 8, 2, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
+
             if (CharSelect.Char == 2)
             {
                 p.setTexturepath(Properties.Resources.Ch_cho_img_03);
@@ -47,7 +67,7 @@ namespace AdventureGame
 
             }
 
-            Sword testsword = new Sword("Testsword", Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
+            Sword testsword = new Sword("kuna", Properties.Resources.doppelseitiges_kuna, "..\\..\\Resources\\doppelseitiges_kuna.png", 5);
             testsword.drop(1155,525, this);
         }
 

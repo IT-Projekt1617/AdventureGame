@@ -85,7 +85,7 @@ namespace AdventureGame
             timer2.Start();
             Door.Timerlist.Add(timer2);
 
-            Sword testsword = new Sword("Testsword",Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 100);
+            Sword testsword = new Sword("Testsword",Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
             testsword.drop(50, 550,this);
 
 
