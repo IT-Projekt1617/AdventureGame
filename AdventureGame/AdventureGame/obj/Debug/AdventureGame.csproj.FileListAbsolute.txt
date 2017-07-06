@@ -45,5 +45,4 @@ F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Leve
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_03.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_04.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_05cs.resources
-D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.CodeAnalysisLog.xml
-D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.lastcodeanalysissucceeded
+D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
