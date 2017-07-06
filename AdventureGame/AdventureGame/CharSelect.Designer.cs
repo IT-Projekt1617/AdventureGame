@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(192, 56);
             this.label1.TabIndex = 2;
             this.label1.Text = "Shiro しろ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
