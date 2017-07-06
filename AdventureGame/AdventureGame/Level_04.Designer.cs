@@ -38,16 +38,19 @@
             this.player = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.barrier2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.barrier2);
             this.panel1.Controls.Add(this.door);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.Slot1);
@@ -132,6 +135,16 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // barrier2
+            // 
+            this.barrier2.BackColor = System.Drawing.Color.Transparent;
+            this.barrier2.BackgroundImage = global::AdventureGame.Properties.Resources.nightrock;
+            this.barrier2.Location = new System.Drawing.Point(568, 274);
+            this.barrier2.Name = "barrier2";
+            this.barrier2.Size = new System.Drawing.Size(128, 132);
+            this.barrier2.TabIndex = 19;
+            this.barrier2.TabStop = false;
+            // 
             // Level_04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +182,6 @@
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox barrier2;
     }
 }
