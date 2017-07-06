@@ -30,9 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.player = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ghost2 = new System.Windows.Forms.PictureBox();
+            this.ghost1 = new System.Windows.Forms.PictureBox();
+            this.enemy1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.barrier5 = new System.Windows.Forms.PictureBox();
+            this.barrier6 = new System.Windows.Forms.PictureBox();
+            this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier7 = new System.Windows.Forms.PictureBox();
             this.barrier3 = new System.Windows.Forms.PictureBox();
-            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.nobarrier = new System.Windows.Forms.PictureBox();
             this.barrier9 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
@@ -43,19 +51,19 @@
             this.Slot3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.barrier2 = new System.Windows.Forms.PictureBox();
-            this.barrier6 = new System.Windows.Forms.PictureBox();
-            this.barrier5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.enemy1 = new System.Windows.Forms.PictureBox();
-            this.ghost1 = new System.Windows.Forms.PictureBox();
-            this.ghost2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.player = new System.Windows.Forms.PictureBox();
+            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
@@ -63,15 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghost2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +89,6 @@
             this.panel1.Controls.Add(this.barrier7);
             this.panel1.Controls.Add(this.barrier3);
             this.panel1.Controls.Add(this.barrier4);
-            this.panel1.Controls.Add(this.nobarrier);
             this.panel1.Controls.Add(this.barrier9);
             this.panel1.Controls.Add(this.barrier1);
             this.panel1.Controls.Add(this.door);
@@ -97,12 +96,109 @@
             this.panel1.Controls.Add(this.Slot1);
             this.panel1.Controls.Add(this.Slot2);
             this.panel1.Controls.Add(this.Slot3);
+            this.panel1.Controls.Add(this.nobarrier);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // player
+            // 
+            this.player.BackColor = System.Drawing.Color.Transparent;
+            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.player.Location = new System.Drawing.Point(34, 194);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(60, 50);
+            this.player.TabIndex = 31;
+            this.player.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(708, 481);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 131);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ghost2
+            // 
+            this.ghost2.BackColor = System.Drawing.Color.Transparent;
+            this.ghost2.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
+            this.ghost2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ghost2.Location = new System.Drawing.Point(1138, 599);
+            this.ghost2.Name = "ghost2";
+            this.ghost2.Size = new System.Drawing.Size(60, 50);
+            this.ghost2.TabIndex = 29;
+            this.ghost2.TabStop = false;
+            // 
+            // ghost1
+            // 
+            this.ghost1.BackColor = System.Drawing.Color.Transparent;
+            this.ghost1.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
+            this.ghost1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ghost1.Location = new System.Drawing.Point(1012, 194);
+            this.ghost1.Name = "ghost1";
+            this.ghost1.Size = new System.Drawing.Size(60, 50);
+            this.ghost1.TabIndex = 28;
+            this.ghost1.TabStop = false;
+            // 
+            // enemy1
+            // 
+            this.enemy1.BackColor = System.Drawing.Color.Transparent;
+            this.enemy1.BackgroundImage = global::AdventureGame.Properties.Resources.zombie;
+            this.enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.enemy1.Location = new System.Drawing.Point(564, 331);
+            this.enemy1.Name = "enemy1";
+            this.enemy1.Size = new System.Drawing.Size(60, 50);
+            this.enemy1.TabIndex = 27;
+            this.enemy1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(191, 537);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(122, 63);
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
+            // 
+            // barrier5
+            // 
+            this.barrier5.BackColor = System.Drawing.Color.Transparent;
+            this.barrier5.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
+            this.barrier5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.barrier5.Location = new System.Drawing.Point(574, 476);
+            this.barrier5.Name = "barrier5";
+            this.barrier5.Size = new System.Drawing.Size(128, 136);
+            this.barrier5.TabIndex = 25;
+            this.barrier5.TabStop = false;
+            // 
+            // barrier6
+            // 
+            this.barrier6.BackColor = System.Drawing.Color.Transparent;
+            this.barrier6.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
+            this.barrier6.Location = new System.Drawing.Point(319, 476);
+            this.barrier6.Name = "barrier6";
+            this.barrier6.Size = new System.Drawing.Size(249, 136);
+            this.barrier6.TabIndex = 24;
+            this.barrier6.TabStop = false;
+            // 
+            // barrier2
+            // 
+            this.barrier2.BackColor = System.Drawing.Color.Transparent;
+            this.barrier2.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
+            this.barrier2.Location = new System.Drawing.Point(707, 250);
+            this.barrier2.Name = "barrier2";
+            this.barrier2.Size = new System.Drawing.Size(122, 140);
+            this.barrier2.TabIndex = 23;
+            this.barrier2.TabStop = false;
             // 
             // barrier7
             // 
@@ -123,17 +219,6 @@
             this.barrier3.Size = new System.Drawing.Size(249, 136);
             this.barrier3.TabIndex = 21;
             this.barrier3.TabStop = false;
-            // 
-            // barrier4
-            // 
-            this.barrier4.BackColor = System.Drawing.Color.Transparent;
-            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
-            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier4.Location = new System.Drawing.Point(446, 97);
-            this.barrier4.Name = "barrier4";
-            this.barrier4.Size = new System.Drawing.Size(128, 147);
-            this.barrier4.TabIndex = 20;
-            this.barrier4.TabStop = false;
             // 
             // nobarrier
             // 
@@ -175,6 +260,7 @@
             this.door.Size = new System.Drawing.Size(75, 75);
             this.door.TabIndex = 15;
             this.door.TabStop = false;
+            this.door.Click += new System.EventHandler(this.door_Click);
             // 
             // label7
             // 
@@ -227,101 +313,16 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // barrier2
+            // barrier4
             // 
-            this.barrier2.BackColor = System.Drawing.Color.Transparent;
-            this.barrier2.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
-            this.barrier2.Location = new System.Drawing.Point(707, 250);
-            this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(122, 140);
-            this.barrier2.TabIndex = 23;
-            this.barrier2.TabStop = false;
-            // 
-            // barrier6
-            // 
-            this.barrier6.BackColor = System.Drawing.Color.Transparent;
-            this.barrier6.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
-            this.barrier6.Location = new System.Drawing.Point(319, 476);
-            this.barrier6.Name = "barrier6";
-            this.barrier6.Size = new System.Drawing.Size(249, 136);
-            this.barrier6.TabIndex = 24;
-            this.barrier6.TabStop = false;
-            // 
-            // barrier5
-            // 
-            this.barrier5.BackColor = System.Drawing.Color.Transparent;
-            this.barrier5.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
-            this.barrier5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.barrier5.Location = new System.Drawing.Point(574, 476);
-            this.barrier5.Name = "barrier5";
-            this.barrier5.Size = new System.Drawing.Size(128, 136);
-            this.barrier5.TabIndex = 25;
-            this.barrier5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(191, 537);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(122, 63);
-            this.pictureBox6.TabIndex = 26;
-            this.pictureBox6.TabStop = false;
-            // 
-            // enemy1
-            // 
-            this.enemy1.BackColor = System.Drawing.Color.Transparent;
-            this.enemy1.BackgroundImage = global::AdventureGame.Properties.Resources.zombie;
-            this.enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.enemy1.Location = new System.Drawing.Point(564, 331);
-            this.enemy1.Name = "enemy1";
-            this.enemy1.Size = new System.Drawing.Size(60, 50);
-            this.enemy1.TabIndex = 27;
-            this.enemy1.TabStop = false;
-            // 
-            // ghost1
-            // 
-            this.ghost1.BackColor = System.Drawing.Color.Transparent;
-            this.ghost1.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
-            this.ghost1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ghost1.Location = new System.Drawing.Point(1012, 194);
-            this.ghost1.Name = "ghost1";
-            this.ghost1.Size = new System.Drawing.Size(60, 50);
-            this.ghost1.TabIndex = 28;
-            this.ghost1.TabStop = false;
-            // 
-            // ghost2
-            // 
-            this.ghost2.BackColor = System.Drawing.Color.Transparent;
-            this.ghost2.BackgroundImage = global::AdventureGame.Properties.Resources.ghost;
-            this.ghost2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ghost2.Location = new System.Drawing.Point(1138, 599);
-            this.ghost2.Name = "ghost2";
-            this.ghost2.Size = new System.Drawing.Size(60, 50);
-            this.ghost2.TabIndex = 29;
-            this.ghost2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(708, 481);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 131);
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
-            // player
-            // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.player.Location = new System.Drawing.Point(34, 194);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(60, 50);
-            this.player.TabIndex = 31;
-            this.player.TabStop = false;
+            this.barrier4.BackColor = System.Drawing.Color.Transparent;
+            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.nighttwo_trees;
+            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier4.Location = new System.Drawing.Point(446, 97);
+            this.barrier4.Name = "barrier4";
+            this.barrier4.Size = new System.Drawing.Size(128, 147);
+            this.barrier4.TabIndex = 20;
+            this.barrier4.TabStop = false;
             // 
             // Level_03
             // 
@@ -339,9 +340,17 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_03_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nobarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
@@ -349,15 +358,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barrier5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghost2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,7 +376,6 @@
         private System.Windows.Forms.PictureBox barrier1;
         private System.Windows.Forms.PictureBox barrier9;
         private System.Windows.Forms.PictureBox nobarrier;
-        private System.Windows.Forms.PictureBox barrier4;
         private System.Windows.Forms.PictureBox barrier3;
         private System.Windows.Forms.PictureBox barrier7;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -387,5 +387,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ghost2;
         private System.Windows.Forms.PictureBox ghost1;
+        private System.Windows.Forms.PictureBox barrier4;
     }
 }

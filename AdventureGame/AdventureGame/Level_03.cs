@@ -26,7 +26,7 @@ namespace AdventureGame
         {
 
             p = new Player(player, 10, 20, 20, 0, null);
-            d = new Door(this, new Menu(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
+            d = new Door(this, new Level_04(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
 
             timer1.Start();
             Door.Timerlist.Add(timer1);
@@ -78,6 +78,11 @@ namespace AdventureGame
         {
 
             CustomEventHandler.KeyUp(panel1, e, p, this);
+        }
+
+        private void door_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
