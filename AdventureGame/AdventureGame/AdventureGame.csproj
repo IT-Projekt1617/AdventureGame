@@ -252,5 +252,14 @@
   <ItemGroup>
     <None Include="Resources\doppelseitiges_kuna.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6_34332.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

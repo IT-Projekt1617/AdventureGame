@@ -35,13 +35,13 @@ namespace AdventureGame
         // button1 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.Aqua;
+           // button1.BackColor = Color.Aqua;
 
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = SystemColors.ActiveCaption;
+            //button1.BackColor = SystemColors.ActiveCaption;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -75,12 +75,12 @@ namespace AdventureGame
         }
         private void button5_MouseEnter(object sender, EventArgs e)
         {
-            button5.BackColor = Color.Aqua;
+            //button5.BackColor = Color.Aqua;
         }
 
         private void button5_MouseLeave(object sender, EventArgs e)
         {
-            button5.BackColor = SystemColors.ActiveCaption;
+            //button5.BackColor = SystemColors.ActiveCaption;
         }
 
 
@@ -99,18 +99,23 @@ namespace AdventureGame
 
         private void button4_MouseEnter(object sender, EventArgs e)
         {
-            button4.BackColor = Color.Aqua;
+           // button4.BackColor = Color.Aqua;
         }
 
         private void button4_MouseLeave(object sender, EventArgs e)
         {
-            button4.BackColor = SystemColors.ActiveCaption;
+            //button4.BackColor = SystemColors.ActiveCaption;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             DialogResult result;
             result = MessageBox.Show("Speicherstand beschädigt. Laden nicht möglich.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

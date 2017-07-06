@@ -42,9 +42,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::AdventureGame.Properties.Resources.Ch_cho_img_01;
+            this.pictureBox2.BackgroundImage = global::AdventureGame.Properties.Resources.kuro;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(814, 191);
+            this.pictureBox2.Location = new System.Drawing.Point(827, 202);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(347, 450);
             this.pictureBox2.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::AdventureGame.Properties.Resources.Ch_van_img_02;
+            this.pictureBox1.BackgroundImage = global::AdventureGame.Properties.Resources.shiro;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(103, 191);
             this.pictureBox1.Name = "pictureBox1";
