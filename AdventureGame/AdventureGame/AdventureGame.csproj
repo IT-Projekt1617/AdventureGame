@@ -294,5 +294,17 @@
   <ItemGroup>
     <None Include="Resources\treasure_closed_blue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wasd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacebar-pagedown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esc_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard-esc-escape-function-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

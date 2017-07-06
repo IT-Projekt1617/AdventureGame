@@ -99,7 +99,7 @@
             this.button4.Size = new System.Drawing.Size(420, 80);
             this.button4.TabIndex = 9;
             this.button4.TabStop = false;
-            this.button4.Text = "Settings";
+            this.button4.Text = "Help";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);

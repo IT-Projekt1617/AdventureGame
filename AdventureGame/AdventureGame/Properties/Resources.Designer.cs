@@ -233,6 +233,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap esc_key {
+            get {
+                object obj = ResourceManager.GetObject("esc_key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ghost {
             get {
                 object obj = ResourceManager.GetObject("ghost", resourceCulture);
@@ -266,6 +276,16 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap katana {
             get {
                 object obj = ResourceManager.GetObject("katana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap keyboard_esc_escape_function_512 {
+            get {
+                object obj = ResourceManager.GetObject("keyboard-esc-escape-function-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +403,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spacebar_pagedown {
+            get {
+                object obj = ResourceManager.GetObject("spacebar-pagedown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sword {
             get {
                 object obj = ResourceManager.GetObject("sword", resourceCulture);
@@ -436,6 +466,16 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap two_trees {
             get {
                 object obj = ResourceManager.GetObject("two_trees", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wasd {
+            get {
+                object obj = ResourceManager.GetObject("wasd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
