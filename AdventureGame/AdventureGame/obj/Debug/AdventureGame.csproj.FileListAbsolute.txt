@@ -1,6 +1,5 @@
 D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe
 D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.pdb
-D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Properties.Resources.resources
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.csproj.GenerateResource.Cache
 D:\Github\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.exe
@@ -46,3 +45,5 @@ F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Leve
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_03.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_04.resources
 F:\githup\AdventureGame\AdventureGame\AdventureGame\obj\Debug\AdventureGame.Level_05cs.resources
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.CodeAnalysisLog.xml
+D:\Github\AdventureGame\AdventureGame\AdventureGame\bin\Debug\AdventureGame.exe.lastcodeanalysissucceeded
