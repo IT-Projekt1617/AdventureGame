@@ -1,4 +1,5 @@
-﻿using AdventureGame.Terrain;
+﻿using AdventureGame.Items;
+using AdventureGame.Terrain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,9 @@ namespace AdventureGame
                 p.setTexturepath(Properties.Resources.Ch_van_img_03);
 
             }
+
+            Sword testsword = new Sword("Testsword", Properties.Resources.dolch, "..\\..\\Resources\\dolch.png", 2);
+            testsword.drop(1155,525, this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
