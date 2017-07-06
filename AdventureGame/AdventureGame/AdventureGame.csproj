@@ -87,11 +87,11 @@
     <Compile Include="FileManager.cs" />
     <Compile Include="Inventory\Inventory.cs" />
     <Compile Include="Items\Sword.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Handler\ItemHandler.cs" />
     <Compile Include="Handler\LivingEntityHandler.cs" />
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="Level_05cs.resx">
       <DependentUpon>Level_05cs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Level_01.resx">
       <DependentUpon>Level_01.cs</DependentUpon>
@@ -260,6 +260,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6_34820.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6_350d19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6s_34820.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6_350d119.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2017-7-6s1_34820.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

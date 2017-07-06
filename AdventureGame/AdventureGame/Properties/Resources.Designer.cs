@@ -83,6 +83,56 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2017_7_6_34820 {
+            get {
+                object obj = ResourceManager.GetObject("2017-7-6_34820", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2017_7_6_350d119 {
+            get {
+                object obj = ResourceManager.GetObject("2017-7-6_350d119", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2017_7_6_350d19 {
+            get {
+                object obj = ResourceManager.GetObject("2017-7-6_350d19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2017_7_6s_34820 {
+            get {
+                object obj = ResourceManager.GetObject("2017-7-6s_34820", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2017_7_6s1_34820 {
+            get {
+                object obj = ResourceManager.GetObject("2017-7-6s1_34820", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bomb {
             get {
                 object obj = ResourceManager.GetObject("bomb", resourceCulture);
@@ -196,6 +246,16 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap kuro {
             get {
                 object obj = ResourceManager.GetObject("kuro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kuro1 {
+            get {
+                object obj = ResourceManager.GetObject("kuro1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
