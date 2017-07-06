@@ -22,7 +22,7 @@ namespace AdventureGame
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Level_01 l = new Level_01();
+            Level_04 l = new Level_04();
             Char = 1;
             l.Show();
             this.Close();
@@ -31,7 +31,7 @@ namespace AdventureGame
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Level_01 l = new Level_01();
+            Level_04 l = new Level_04();
             Char = 2;
             l.Show();
             this.Close();

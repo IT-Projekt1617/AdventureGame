@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
@@ -49,10 +46,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.barrier3 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Slot1 = new System.Windows.Forms.PictureBox();
             this.Slot2 = new System.Windows.Forms.PictureBox();
             this.Slot3 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -107,30 +107,12 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox11.Location = new System.Drawing.Point(409, 317);
+            this.pictureBox11.Location = new System.Drawing.Point(1040, 106);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(128, 79);
             this.pictureBox11.TabIndex = 38;
@@ -141,7 +123,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox8.Location = new System.Drawing.Point(409, 421);
+            this.pictureBox8.Location = new System.Drawing.Point(409, 544);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(128, 79);
             this.pictureBox8.TabIndex = 37;
@@ -152,7 +134,7 @@
             this.barrier1.BackColor = System.Drawing.Color.Transparent;
             this.barrier1.BackgroundImage = global::AdventureGame.Properties.Resources.nighttree_stump;
             this.barrier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.barrier1.Location = new System.Drawing.Point(409, 229);
+            this.barrier1.Location = new System.Drawing.Point(409, 106);
             this.barrier1.Name = "barrier1";
             this.barrier1.Size = new System.Drawing.Size(128, 79);
             this.barrier1.TabIndex = 36;
@@ -299,6 +281,15 @@
             this.door.TabIndex = 15;
             this.door.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
+            // 
             // Slot1
             // 
             this.Slot1.BackColor = System.Drawing.Color.Transparent;
@@ -341,6 +332,15 @@
             this.player.Size = new System.Drawing.Size(60, 50);
             this.player.TabIndex = 1;
             this.player.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Level_05cs
             // 
