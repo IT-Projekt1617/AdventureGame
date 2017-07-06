@@ -71,7 +71,7 @@ namespace AdventureGame
             g = new Ghost(ghost1, 2, 5, 5, 3, new HealthPotion("Health Potion", 5, Properties.Resources.Hpotion, null), null, p.getEntity());
             Barrier.addBarrier(barrier1);
             Barrier.addBarrier(barrier2);
-            d = new Door(this, new Level_02(), true, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
+            d = new Door(this, new Level_02(), false, Properties.Resources.opendoor, Properties.Resources.closeddoor, door);
 
             timer1.Start();
             Door.Timerlist.Add(timer1);
@@ -108,7 +108,7 @@ namespace AdventureGame
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            CustomEventHandler.Update2(this);
+            CustomEventHandler.Update2(d,this);
         }
 
         private void Slot1_Click(object sender, EventArgs e)

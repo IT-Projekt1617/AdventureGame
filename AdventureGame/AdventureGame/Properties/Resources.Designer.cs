@@ -193,6 +193,26 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nighttree_stump {
+            get {
+                object obj = ResourceManager.GetObject("nighttree_stump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nighttwo_trees {
+            get {
+                object obj = ResourceManager.GetObject("nighttwo_trees", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap opendoor {
             get {
                 object obj = ResourceManager.GetObject("opendoor", resourceCulture);
@@ -226,6 +246,26 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap tree {
             get {
                 object obj = ResourceManager.GetObject("tree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tree_stump {
+            get {
+                object obj = ResourceManager.GetObject("tree_stump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap two_trees {
+            get {
+                object obj = ResourceManager.GetObject("two_trees", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

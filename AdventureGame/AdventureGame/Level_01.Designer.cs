@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.barrier3 = new System.Windows.Forms.PictureBox();
             this.ghost1 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +44,9 @@
             this.barrier2 = new System.Windows.Forms.PictureBox();
             this.barrier1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.barrier4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghost1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
@@ -53,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -73,6 +77,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.panel1.Controls.Add(this.barrier4);
+            this.panel1.Controls.Add(this.barrier3);
             this.panel1.Controls.Add(this.ghost1);
             this.panel1.Controls.Add(this.door);
             this.panel1.Controls.Add(this.enemy1);
@@ -102,6 +108,17 @@
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // barrier3
+            // 
+            this.barrier3.BackColor = System.Drawing.Color.Transparent;
+            this.barrier3.BackgroundImage = global::AdventureGame.Properties.Resources.tree_stump;
+            this.barrier3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier3.Location = new System.Drawing.Point(284, 185);
+            this.barrier3.Name = "barrier3";
+            this.barrier3.Size = new System.Drawing.Size(128, 79);
+            this.barrier3.TabIndex = 16;
+            this.barrier3.TabStop = false;
             // 
             // ghost1
             // 
@@ -207,6 +224,17 @@
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
             // 
+            // barrier4
+            // 
+            this.barrier4.BackColor = System.Drawing.Color.Transparent;
+            this.barrier4.BackgroundImage = global::AdventureGame.Properties.Resources.two_trees;
+            this.barrier4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.barrier4.Location = new System.Drawing.Point(863, 149);
+            this.barrier4.Name = "barrier4";
+            this.barrier4.Size = new System.Drawing.Size(128, 147);
+            this.barrier4.TabIndex = 17;
+            this.barrier4.TabStop = false;
+            // 
             // Level_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +251,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level_01_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghost1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
@@ -232,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barrier4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +281,7 @@
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox door;
         private System.Windows.Forms.PictureBox ghost1;
+        private System.Windows.Forms.PictureBox barrier3;
+        private System.Windows.Forms.PictureBox barrier4;
     }
 }

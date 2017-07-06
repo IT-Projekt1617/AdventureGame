@@ -259,7 +259,7 @@ namespace AdventureGame
 
 
 
-        public static void Update2(Control c)
+        public static void Update2(Door d,Control c)
         {
             
             
@@ -294,8 +294,18 @@ namespace AdventureGame
                         LivingEntityHandler.reduceHurtDelay();
                         AnimationHandler.reduceanimationCD(c);
 
-                    
 
+            if (LivingEntityHandler.getEnemys().Count == 0)
+            {
+                d.setOpen();
+            }
+            else
+            {
+                if (d.isOpen())
+                {
+                    d.setClosed();
+                }
+            }
 
 
 

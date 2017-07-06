@@ -234,5 +234,11 @@
   <ItemGroup>
     <None Include="Resources\nightrock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_stump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nighttree_stump.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
